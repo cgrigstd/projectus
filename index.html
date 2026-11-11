@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark light" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" content="Buscador estático de proyectos documentados: electrónica, Arduino, Raspberry Pi, CNC, impresión 3D, robótica, audio e instrumentación. Enlaces a fuentes en inglés y español." />
   <title>PROJECTUS · Project Finder</title>
@@ -31,6 +31,7 @@
       </div>
     </div>
     <div class="header-actions">
+      <button class="btn btn-primary donate-btn" type="button" data-action="open-donation" data-i18n="donateButton">Donar</button>
       <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema">
         <svg class="icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4" />
@@ -179,11 +180,27 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <p data-i18n="footerDisclaimer">Herramienta estática de descubrimiento. No extrae contenido: enlaza a las fuentes originales y respeta sus licencias y condiciones de uso.</p>
-    <p class="muted" data-i18n="footerData">Los campos desconocidos se muestran como «No confirmado». Las clasificaciones estimadas están marcadas.</p>
-  </footer>
+  <span id="donationAlias" hidden>juan.667.ropa.mp</span>
+  <span id="donationCvu" hidden>0000003100038558002087</span>
+  <span id="donationHolder" hidden>Juan Pablo Romero</span>
 
+  <footer class="site-footer">
+    <p class="footer-purpose" data-i18n="footerPurpose">He decidido crear esta herramienta con el objetivo de ordenar un poco la información y que todo se pueda buscar en un solo lugar.</p>
+
+    <div class="suggestions-box">
+      <p class="suggestions-title" data-i18n="suggestionsTitle">Sugerencias</p>
+      <form class="suggestions-form" action="https://formsubmit.co/cgrig.td@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="PROJECTUS mejoras" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://cgrigstd.github.io/projectus/" />
+        <input type="text" name="name" data-i18n-placeholder="suggestionsName" placeholder="Tu nombre" required />
+        <input type="email" name="email" data-i18n-placeholder="suggestionsEmail" placeholder="Tu correo" required />
+        <textarea name="message" data-i18n-placeholder="suggestionsMessage" placeholder="Tu sugerencia" required rows="3"></textarea>
+        <button type="submit" class="btn btn-primary" data-i18n="suggestionsSubmit">Enviar</button>
+      </form>
+    </div>
+  </footer>
   <div id="modalRoot"></div>
   <div id="toast" role="status" aria-live="polite"></div>
 

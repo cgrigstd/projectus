@@ -204,6 +204,19 @@
       copied: "Consulta copiada",
       footerDisclaimer: "Herramienta estática de descubrimiento. No extrae contenido: enlaza a las fuentes originales y respeta sus licencias y condiciones de uso.",
       footerData: "Los campos desconocidos se muestran como «No confirmado». Las clasificaciones estimadas están marcadas.",
+      footerPurpose: "He decidido crear esta herramienta con el objetivo de ordenar un poco la información y que todo se pueda buscar en un solo lugar.",
+      suggestionsTitle: "Sugerencias",
+      suggestionsName: "Tu nombre",
+      suggestionsEmail: "Tu correo",
+      suggestionsMessage: "Tu sugerencia",
+      suggestionsSubmit: "Enviar",
+      sending: "Enviando...",
+      footerDonate: "Tu apoyo impulsa nuevas funciones y mejoras.",
+      footerCvuLabel: "CVU MercadoPago:",
+      donationVerify: "Antes de transferir, verificá que el destinatario sea [Tu Nombre].",
+      donationOfficial: "Sitio oficial: https://github.com/cgrigstd/projectus",
+      donationLinkLabel: "Link de pago:",
+      donateButton: "Donar",
       themeLight: "Cambiar a tema claro",
       themeDark: "Cambiar a tema oscuro",
       switchToEnglish: "Switch to English",
@@ -308,6 +321,19 @@
       copied: "Query copied",
       footerDisclaimer: "Static discovery tool. It does not scrape content: it links to original sources and respects their licenses and terms of use.",
       footerData: "Unknown fields are shown as \"Not confirmed\". Estimated classifications are marked.",
+      footerPurpose: "I created this tool to organize information a bit and make everything searchable in one place.",
+      suggestionsTitle: "Suggestions",
+      suggestionsName: "Your name",
+      suggestionsEmail: "Your email",
+      suggestionsMessage: "Your suggestion",
+      suggestionsSubmit: "Send",
+      sending: "Sending...",
+      footerDonate: "Your support drives new features and improvements.",
+      footerCvuLabel: "MercadoPago CVU:",
+      donationVerify: "Before transferring, verify the recipient is [Your Name].",
+      donationOfficial: "Official site: https://github.com/cgrigstd/projectus",
+      donationLinkLabel: "Payment link:",
+      donateButton: "Donate",
       themeLight: "Switch to light theme",
       themeDark: "Switch to dark theme",
       switchToEnglish: "Switch to English",
@@ -1194,6 +1220,45 @@
     }
   }
 
+  function openDonationModal() {
+    const root = $("#modalRoot");
+    if (!root) return;
+    lastFocused = document.activeElement;
+    const alias = $("#donationAlias") ? $("#donationAlias").textContent.trim() : "";
+    const cvu = $("#donationCvu") ? $("#donationCvu").textContent.trim() : "";
+    const holder = $("#donationHolder") ? $("#donationHolder").textContent.trim() : "";
+    root.innerHTML = `
+      <div class="modal-backdrop" data-action="close-backdrop">
+        <div class="modal donation-modal" role="dialog" aria-modal="true" aria-labelledby="donationModalTitle">
+          <div class="modal-head">
+            <div class="donation-modal-head">
+              <h2 id="donationModalTitle" class="donation-modal-title">${escapeHtml(t("footerDonate"))}</h2>
+            </div>
+            <button class="icon-btn" type="button" data-action="close-modal" aria-label="${escapeHtml(t("close"))}">${ICONS.close}</button>
+          </div>
+          <div class="donation-modal-body">
+            ${holder ? `<p class="donation-holder"><strong>Titular:</strong> ${escapeHtml(holder)}</p>` : ""}
+            <p class="donation-row"><span>Alias:</span> <code>${escapeHtml(alias)}</code> <button class="btn btn-ghost btn-sm" type="button" data-action="copy-alias">${escapeHtml(t("copy"))}</button></p>
+            <p class="donation-row"><span>CVU:</span> <code>${escapeHtml(cvu)}</code> <button class="btn btn-ghost btn-sm" type="button" data-action="copy-cvu">${escapeHtml(t("copy"))}</button></p>
+            <p class="muted small">${escapeHtml(t("donationOfficial"))}</p>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-ghost" type="button" data-action="close-modal">${escapeHtml(t("close"))}</button>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.classList.add("modal-open");
+    const aliasBtn = root.querySelector("[data-action='copy-alias']");
+    if (aliasBtn) aliasBtn.addEventListener("click", () => {
+      if (navigator.clipboard) navigator.clipboard.writeText(alias).then(() => showToast(t("copied")));
+    });
+    const cvuBtn = root.querySelector("[data-action='copy-cvu']");
+    if (cvuBtn) cvuBtn.addEventListener("click", () => {
+      if (navigator.clipboard) navigator.clipboard.writeText(cvu).then(() => showToast(t("copied")));
+    });
+  }
+
   function openProjectModal(id, keepFocus) {
     const project = state.projects.find((item) => item.id === id);
     if (!project) return;
@@ -1439,6 +1504,21 @@
     const themeToggle = $("#themeToggle");
     if (themeToggle) themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
 
+    const suggestionsForm = $(".suggestions-form");
+    if (suggestionsForm) {
+      suggestionsForm.addEventListener("submit", () => {
+        const button = suggestionsForm.querySelector('button[type="submit"]');
+        if (button) {
+          button.disabled = true;
+          button.textContent = t("sending");
+          setTimeout(() => {
+            button.disabled = false;
+            button.textContent = t("suggestionsSubmit");
+          }, 5000);
+        }
+      });
+    }
+
     const clearButton = $("#clearFilters");
     if (clearButton) clearButton.addEventListener("click", clearFilters);
 
@@ -1557,6 +1637,12 @@
       if (action === "refresh-index") {
         event.preventDefault();
         refreshIndex();
+        return;
+      }
+
+      if (action === "open-donation") {
+        event.preventDefault();
+        openDonationModal();
         return;
       }
 
