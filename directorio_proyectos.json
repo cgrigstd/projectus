@@ -1,0 +1,191 @@
+{
+  "title": "Directorio de sitios y recursos para encontrar proyectos realizables",
+  "description": "Enlaces recopilados de las recomendaciones anteriores, organizados por categoría. Se conservan las URLs tal como fueron compartidas.",
+  "categories": [
+    {
+      "category": "Repositorios y comunidades de proyectos maker",
+      "links": [
+        {
+          "name": "Hackaday.io",
+          "url": "https://hackaday.io/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "Instructables",
+          "url": "https://www.instructables.com/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "Hackster.io",
+          "url": "https://www.hackster.io/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "Make:",
+          "url": "https://makezine.com/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "MakersUP",
+          "url": "https://makersup.com/",
+          "language": "Español"
+        }
+      ]
+    },
+    {
+      "category": "Electrónica, Arduino, sensores e instrumentación",
+      "links": [
+        {
+          "name": "Arduino Project Hub",
+          "url": "https://projecthub.arduino.cc/",
+          "language": "Multilingüe / principalmente inglés"
+        },
+        {
+          "name": "Adafruit Learning System",
+          "url": "https://learn.adafruit.com/",
+          "language": "Inglés"
+        },
+        {
+          "name": "SparkFun",
+          "url": "https://www.sparkfun.com/",
+          "language": "Inglés"
+        },
+        {
+          "name": "All About Circuits",
+          "url": "https://www.allaboutcircuits.com/",
+          "language": "Inglés"
+        },
+        {
+          "name": "BricoGeek",
+          "url": "https://blog.bricogeek.com/",
+          "language": "Español"
+        },
+        {
+          "name": "Electrogeek",
+          "url": "https://electrogeek.com/",
+          "language": "Español"
+        },
+        {
+          "name": "Prometec",
+          "url": "https://www.prometec.net/",
+          "language": "Español"
+        },
+        {
+          "name": "Inventable",
+          "url": "https://www.inventable.eu/",
+          "language": "Español"
+        },
+        {
+          "name": "Luis Llamas",
+          "url": "https://www.luisllamas.es/",
+          "language": "Español"
+        },
+        {
+          "name": "Foros de Electrónica",
+          "url": "https://www.forosdeelectronica.com/",
+          "language": "Español"
+        },
+        {
+          "name": "Arduino",
+          "url": "https://www.arduino.cc/",
+          "language": "Multilingüe / principalmente inglés"
+        }
+      ]
+    },
+    {
+      "category": "Hardware open source, código y documentación técnica",
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/",
+          "language": "Multilingüe / documentación frecuentemente en inglés"
+        }
+      ]
+    },
+    {
+      "category": "Mecánica, CNC, impresión 3D y fabricación digital",
+      "links": [
+        {
+          "name": "OpenBuilds",
+          "url": "https://openbuilds.com/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "Thingiverse",
+          "url": "https://www.thingiverse.com/",
+          "language": "Principalmente inglés"
+        },
+        {
+          "name": "Printables",
+          "url": "https://www.printables.com/",
+          "language": "Multilingüe"
+        },
+        {
+          "name": "3DPoder",
+          "url": "https://www.3dpoder.com/",
+          "language": "Español"
+        }
+      ]
+    },
+    {
+      "category": "Computación física y Raspberry Pi",
+      "links": [
+        {
+          "name": "Raspberry Pi Tutorials",
+          "url": "https://www.raspberrypi.com/tutorials/",
+          "language": "Inglés"
+        }
+      ]
+    },
+    {
+      "category": "Audio, acústica y electrónica aplicada",
+      "links": [
+        {
+          "name": "Hispasonic",
+          "url": "https://www.hispasonic.com/",
+          "language": "Español"
+        }
+      ]
+    },
+    {
+      "category": "Búsquedas directas de proyectos y documentación",
+      "links": [
+        {
+          "name": "Proyectos DIY de contador Geiger open source",
+          "url": "https://www.google.com/search?q=DIY+Geiger+counter+open+source",
+          "language": "Búsqueda web"
+        },
+        {
+          "name": "Proyectos de detector de radiación con lista de materiales",
+          "url": "https://www.google.com/search?q=radiation+detector+project+BOM",
+          "language": "Búsqueda web"
+        },
+        {
+          "name": "Calibración de medidores de radiación DIY",
+          "url": "https://www.google.com/search?q=DIY+radiation+meter+calibration",
+          "language": "Búsqueda web"
+        },
+        {
+          "name": "Proyectos de instrumentación electrónica en PDF",
+          "url": "https://www.google.com/search?q=proyectos+instrumentacion+electronica+PDF",
+          "language": "Búsqueda web en español"
+        },
+        {
+          "name": "Proyectos de ingeniería con lista de materiales",
+          "url": "https://www.google.com/search?q=proyectos+ingenieria+lista+de+materiales",
+          "language": "Búsqueda web en español"
+        },
+        {
+          "name": "Proyectos de ciencia experimental casera",
+          "url": "https://www.google.com/search?q=proyectos+ciencia+experimental+casera",
+          "language": "Búsqueda web en español"
+        },
+        {
+          "name": "Proyectos universitarios de ingeniería con documentación completa",
+          "url": "https://www.google.com/search?q=proyectos+universitarios+ingenieria+documentacion+completa",
+          "language": "Búsqueda web en español"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+﻿# Collector runtime files
+scripts/.indice.lock
+scripts/.indice.last_run
+scripts/indice.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.tmp

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Robotics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e234d"/>
+      <stop offset="1" stop-color="#0b0f14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.28" r="0.8">
+      <stop offset="0" stop-color="#8b9cff" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#8b9cff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8b9cff" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <g fill="none" stroke="#8b9cff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+    <path d="M300 320h200"/>
+    <path d="M350 320v-70l70-60 60 40"/>
+    <circle cx="350" cy="250" r="16" fill="#8b9cff" stroke="none"/>
+    <circle cx="420" cy="190" r="16" fill="#8b9cff" stroke="none"/>
+    <path d="M480 230l50 30"/>
+    <path d="M510 250l20 20M510 250l-10 30"/>
+  </g>
+</svg>

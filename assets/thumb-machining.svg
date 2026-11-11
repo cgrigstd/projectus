@@ -1,0 +1,28 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Machining">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a2a3a"/>
+      <stop offset="1" stop-color="#0b0f14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#60a5fa" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <g fill="none" stroke="#60a5fa" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+    <rect x="300" y="180" width="200" height="90" rx="8"/>
+    <circle cx="340" cy="225" r="22"/>
+    <circle cx="460" cy="225" r="22"/>
+    <path d="M260 225 H300"/>
+    <path d="M500 225 H540"/>
+    <path d="M400 180 V140"/>
+    <path d="M380 140 H420"/>
+    <path d="M360 270 V310 M400 270 V310 M440 270 V310"/>
+  </g>
+</svg>

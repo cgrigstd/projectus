@@ -1,0 +1,48 @@
+﻿name: Update Project Index
+
+on:
+  schedule:
+    # Once per day at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  # Token managed via secret; defaults to the built-in GITHUB_TOKEN.
+  # Replace with a PAT secret name (e.g. PROJECTUS_TOKEN) if you prefer.
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ env.GH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run index collector
+        run: |
+          python scripts/actualizar_indice.py --force --verbose
+
+      - name: Commit updated index (if changed)
+        env:
+          GH_TOKEN: ${{ env.GH_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git add indice.json indice.js
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update daily project index"
+            git push
+          fi

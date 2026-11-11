@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="description" content="Buscador estático de proyectos documentados: electrónica, Arduino, Raspberry Pi, CNC, impresión 3D, robótica, audio e instrumentación. Enlaces a fuentes en inglés y español." />
+  <title>PROJECTUS · Project Finder</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-white.svg" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-white.svg" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-white.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loadingScreen" class="loading-screen" aria-hidden="true">
+    <img src="assets/logo.svg" alt="" />
+  </div>
+  <a class="skip-link" href="#main" data-i18n="skipToContent">Saltar al contenido</a>
+  <noscript>
+    <div class="banner"><div>Esta herramienta necesita JavaScript. / This tool requires JavaScript.</div></div>
+  </noscript>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.svg" alt="Projectus" width="48" height="48" />
+      <div class="brand-text">
+        <h1 class="brand-wordmark" data-i18n="appTitle">PROJECTUS</h1>
+        <p data-i18n="appSubtitle">Encuentra proyectos documentados, desde nivel inicial hasta ingeniería.</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+    </div>
+  </header>
+
+  <div id="appBanner" class="banner" hidden></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <h2 id="heroTitle" class="sr-only" data-i18n="heroTitle">Buscar proyectos</h2>
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input id="searchInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="searchPlaceholder" placeholder="Busca por tema, tecnología o material (ej. Geiger, CNC, Arduino)..." aria-label="Buscar proyectos" />
+        <button id="searchAllBtn" class="btn btn-primary search-all" type="button">
+          <span data-i18n="searchAll">Buscar en todas las fuentes</span>
+        </button>
+      </div>
+      <div id="quickTags" class="quick-tags" aria-label="Temas rápidos"></div>
+      <div id="stats" class="stats" aria-live="polite"></div>
+    </section>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones" data-i18n-aria-label="sections">
+      <button class="tab is-active" id="tab-projects" type="button" role="tab" aria-selected="true" aria-controls="panel-projects" data-tab="projects">
+        <span data-i18n="projects">Proyectos</span>
+        <span class="tab-count" id="tabProjectCount">0</span>
+      </button>
+      <button class="tab" id="tab-sources" type="button" role="tab" aria-selected="false" aria-controls="panel-sources" data-tab="sources" tabindex="-1">
+        <span data-i18n="sources">Fuentes</span>
+        <span class="tab-count" id="tabSourceCount">0</span>
+      </button>
+      <button class="tab" id="tab-news" type="button" role="tab" aria-selected="false" aria-controls="panel-news" data-tab="news" tabindex="-1">
+        <span data-i18n="news">Novedades</span>
+        <span class="tab-count" id="tabNewsCount">0</span>
+      </button>
+    </nav>
+
+    <section class="filters" aria-labelledby="filtersTitle">
+      <div class="filters-head">
+        <h2 id="filtersTitle" data-i18n="filters">Filtros</h2>
+        <button id="clearFilters" class="link-btn" type="button" data-i18n="clearFilters">Limpiar filtros</button>
+      </div>
+      <div class="filter-grid">
+        <div class="filter-group" data-tab-filter="projects sources news">
+          <label for="categoryFilter" data-i18n="category">Categoría</label>
+          <select id="categoryFilter"></select>
+        </div>
+        <div class="filter-group" data-tab-filter="projects sources news">
+          <label for="languageFilter" data-i18n="language">Idioma</label>
+          <select id="languageFilter"></select>
+        </div>
+        <div class="filter-group" data-tab-filter="projects">
+          <label for="difficultyFilter" data-i18n="difficulty">Nivel</label>
+          <select id="difficultyFilter"></select>
+        </div>
+        <div class="filter-group" data-tab-filter="projects">
+          <label for="docFilter" data-i18n="documentation">Documentación</label>
+          <select id="docFilter"></select>
+        </div>
+        <div class="filter-group" data-tab-filter="news">
+          <label for="sourceFilter" data-i18n="source">Fuente</label>
+          <select id="sourceFilter"></select>
+        </div>
+        <div class="filter-group" data-tab-filter="projects news">
+          <label for="sortSelect" data-i18n="sort">Ordenar</label>
+          <select id="sortSelect"></select>
+        </div>
+        <label class="favorite-filter" for="favoritesOnly" data-tab-filter="projects">
+          <input id="favoritesOnly" type="checkbox" />
+          <span data-i18n="favoritesOnly">Solo favoritos</span>
+        </label>
+      </div>
+    </section>
+
+    <div id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
+      <section class="results-section" aria-labelledby="projectsTitle">
+        <div class="section-head">
+          <h2 id="projectsTitle"><span data-i18n="projects">Proyectos</span> <span id="projectCount" class="count"></span></h2>
+          <p class="section-hint" data-i18n="projectsHint">Fichas con enlace a la fuente original y estado de su documentación.</p>
+        </div>
+        <div id="projectsGrid" class="grid projects-grid"></div>
+        <div id="projectsEmpty" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+              <path d="M8 11h6" />
+            </svg>
+          </div>
+          <h3 data-i18n="noResults">No se encontraron proyectos con estos filtros.</h3>
+          <p data-i18n="noResultsHint">Prueba con otra palabra, elimina filtros o busca directamente en las fuentes.</p>
+          <button class="btn btn-primary" type="button" data-action="clear-filters" data-i18n="clearFilters">Limpiar filtros</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="panel-sources" class="tab-panel" role="tabpanel" aria-labelledby="tab-sources" hidden>
+      <section class="results-section" aria-labelledby="sourcesTitle">
+        <div class="section-head">
+          <h2 id="sourcesTitle"><span data-i18n="sources">Fuentes</span> <span id="sourceCount" class="count"></span></h2>
+          <p class="section-hint" data-i18n="sourcesHint">Cada tarjeta genera una búsqueda en el sitio original. La herramienta no extrae contenido automáticamente.</p>
+        </div>
+        <div id="sourcesGrid" class="grid sources-grid"></div>
+      </section>
+
+      <section class="results-section" aria-labelledby="suggestedTitle">
+        <div class="section-head">
+          <h2 id="suggestedTitle" data-i18n="suggestedSearches">Búsquedas sugeridas</h2>
+          <p class="section-hint" data-i18n="suggestedHint">Consultas directas en buscadores para localizar documentación, BOM y planos.</p>
+        </div>
+        <div id="suggestedGrid" class="suggested-grid"></div>
+      </section>
+    </div>
+
+    <div id="panel-news" class="tab-panel" role="tabpanel" aria-labelledby="tab-news" hidden>
+      <section class="results-section" aria-labelledby="newsTitle">
+        <div class="section-head">
+          <h2 id="newsTitle"><span data-i18n="news">Novedades</span> <span id="newsCount" class="count"></span></h2>
+          <p class="section-hint" data-i18n="newsHint">Ítems recientes obtenidos de APIs y RSS. El índice se actualiza una vez al día.</p>
+        </div>
+        <div id="newsStatus" class="index-bar" aria-live="polite"></div>
+        <div id="newsErrors" class="index-errors" role="status" hidden></div>
+        <div id="newsGrid" class="grid news-grid"></div>
+        <div id="newsEmpty" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5h16v14H4z" />
+              <path d="M8 9h8M8 13h5" />
+            </svg>
+          </div>
+          <h3 id="newsEmptyTitle"></h3>
+          <p id="newsEmptyHint"></p>
+          <button id="newsEmptyRefresh" class="btn btn-primary" type="button" data-action="refresh-index" data-i18n="refreshIndex">Recargar índice</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footerDisclaimer">Herramienta estática de descubrimiento. No extrae contenido: enlaza a las fuentes originales y respeta sus licencias y condiciones de uso.</p>
+    <p class="muted" data-i18n="footerData">Los campos desconocidos se muestran como «No confirmado». Las clasificaciones estimadas están marcadas.</p>
+  </footer>
+
+  <div id="modalRoot"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="indice.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

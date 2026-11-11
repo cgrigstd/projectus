@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Electronics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3d33"/>
+      <stop offset="1" stop-color="#0b0f14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.28" r="0.8">
+      <stop offset="0" stop-color="#43d9a3" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#43d9a3" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#43d9a3" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <g fill="none" stroke="#43d9a3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+    <rect x="300" y="150" width="200" height="150" rx="18"/>
+    <path d="M340 150V110M400 150V110M460 150V110M340 300v40M400 300v40M460 300v40M300 190h-40M300 240h-40M300 260h-40M500 190h40M500 240h40M500 260h40"/>
+    <circle cx="400" cy="225" r="18" fill="#43d9a3" stroke="none"/>
+  </g>
+</svg>
