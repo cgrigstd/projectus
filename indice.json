@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T10:17:00Z",
+  "generated_at": "2026-11-11T13:57:28Z",
   "user_agent": "ProjectusIndexer/1.0 (local discovery tool)",
   "sources": [
     {
@@ -50,13 +50,13 @@
       "name": "Make:",
       "method": "rss",
       "type": "rss",
-      "status": "ok",
-      "http_status": 200,
+      "status": "error",
+      "http_status": null,
       "count": 10,
       "fetched_at": "2026-11-11T10:16:35Z",
-      "duration_ms": 170,
-      "error": null,
-      "stale": false,
+      "duration_ms": 135,
+      "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
+      "stale": true,
       "url": "https://makezine.com/feed/"
     },
     {
@@ -92,13 +92,13 @@
       "name": "Adafruit Learning System",
       "method": "rss",
       "type": "atom",
-      "status": "ok",
-      "http_status": 200,
+      "status": "error",
+      "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:38Z",
-      "duration_ms": 634,
-      "error": null,
-      "stale": false,
+      "duration_ms": 181,
+      "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
+      "stale": true,
       "url": "https://learn.adafruit.com/feed"
     },
     {
@@ -152,7 +152,7 @@
       "http_status": 403,
       "count": 0,
       "fetched_at": null,
-      "duration_ms": 755,
+      "duration_ms": 231,
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "stale": false,
       "url": "https://electrogeek.com/feed/"
@@ -176,13 +176,13 @@
       "name": "Inventable",
       "method": "rss",
       "type": "rss",
-      "status": "ok",
-      "http_status": 200,
+      "status": "error",
+      "http_status": null,
       "count": 9,
       "fetched_at": "2026-11-11T10:16:44Z",
-      "duration_ms": 1330,
-      "error": null,
-      "stale": false,
+      "duration_ms": 1329,
+      "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
+      "stale": true,
       "url": "https://www.inventable.eu/feed/"
     },
     {
@@ -235,8 +235,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-11T10:16:47Z",
-      "duration_ms": 1195,
+      "fetched_at": "2026-11-11T13:57:18Z",
+      "duration_ms": 531,
       "error": null,
       "stale": false,
       "url": "https://forum.arduino.cc/latest.json"
@@ -249,8 +249,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-11T10:16:50Z",
-      "duration_ms": 896,
+      "fetched_at": "2026-11-11T13:57:20Z",
+      "duration_ms": 563,
       "error": null,
       "stale": false,
       "url": "https://api.github.com/search/repositories?q=topic%3Aarduino&sort=stars&order=desc&per_page=12"
@@ -316,13 +316,13 @@
       "name": "Raspberry Pi Tutorials",
       "method": "rss",
       "type": "atom",
-      "status": "ok",
-      "http_status": 200,
+      "status": "error",
+      "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:53Z",
-      "duration_ms": 1444,
-      "error": null,
-      "stale": false,
+      "duration_ms": 682,
+      "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
+      "stale": true,
       "url": "https://www.raspberrypi.com/tutorials/feed/"
     },
     {
@@ -330,17 +330,41 @@
       "name": "Hispasonic",
       "method": "rss",
       "type": "rss",
-      "status": "ok",
-      "http_status": 200,
+      "status": "error",
+      "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:58Z",
-      "duration_ms": 2563,
-      "error": null,
-      "stale": false,
+      "duration_ms": 1172,
+      "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
+      "stale": true,
       "url": "https://www.hispasonic.com/rss"
     }
   ],
   "items": [
+    {
+      "id": "github:96fb0ac21537",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "SpacehuhnTech/esp8266_deauther",
+      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
+      "summary": "Affordable WiFi hacking platform for testing and learning",
+      "published_at": "2026-11-11T13:56:01Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "attack",
+        "board",
+        "deauth",
+        "deauther",
+        "esp8266",
+        "hack"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
     {
       "id": "github:4afefab3e8c6",
       "source_id": "github",
@@ -350,7 +374,7 @@
       "title": "lvgl/lvgl",
       "url": "https://github.com/lvgl/lvgl",
       "summary": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
-      "published_at": "2026-11-11T10:02:45Z",
+      "published_at": "2026-11-11T13:55:52Z",
       "image": null,
       "tags": [
         "github",
@@ -363,31 +387,112 @@
         "esp32"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
-      "id": "github:694a788ea181",
+      "id": "github:f6bc45260818",
       "source_id": "github",
       "source_name": "GitHub",
       "category": "hardware",
       "language": "multi",
-      "title": "arendst/Tasmota",
-      "url": "https://github.com/arendst/Tasmota",
-      "summary": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",
-      "published_at": "2026-11-11T09:22:49Z",
+      "title": "rwaldron/johnny-five",
+      "url": "https://github.com/rwaldron/johnny-five",
+      "summary": "JavaScript Robotics and IoT programming framework, developed at Bocoup.",
+      "published_at": "2026-11-11T13:32:19Z",
+      "image": null,
+      "tags": [
+        "github",
+        "1-wire",
+        "adc",
+        "arduino",
+        "beaglebone-black",
+        "bluetooth",
+        "chip",
+        "dac"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
+    {
+      "id": "arduino-forum:589e721dba8b",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "QuadBlock: Visual Programming, hardware simulation & MQTT for Arduino Uno R4 boards and ESP32 — 3-day trial",
+      "url": "https://forum.arduino.cc/t/quadblock-visual-programming-hardware-simulation-mqtt-for-arduino-uno-r4-boards-and-esp32-3-day-trial/1467207",
+      "summary": "",
+      "published_at": "2026-11-11T13:31:29Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:18Z"
+    },
+    {
+      "id": "github:5eb1dfecd9f1",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "justcallmekoko/ESP32Marauder",
+      "url": "https://github.com/justcallmekoko/ESP32Marauder",
+      "summary": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32",
+      "published_at": "2026-11-11T13:28:03Z",
       "image": null,
       "tags": [
         "github",
         "arduino",
-        "automation",
-        "esp32",
-        "esp8266",
-        "firmware",
-        "iot",
-        "knx"
+        "beacon",
+        "bluetooth",
+        "command-line",
+        "deauthentication",
+        "defensive",
+        "dualband"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
+    {
+      "id": "arduino-forum:ca127039fcdb",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Is my UNO R4 board still salvagable?",
+      "url": "https://forum.arduino.cc/t/is-my-uno-r4-board-still-salvagable/1467203",
+      "summary": "",
+      "published_at": "2026-11-11T13:24:36Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:18Z"
+    },
+    {
+      "id": "github:c910da55360c",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "espressif/arduino-esp32",
+      "url": "https://github.com/espressif/arduino-esp32",
+      "summary": "Arduino core for the ESP32 family of SoCs",
+      "published_at": "2026-11-11T13:20:40Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "esp-idf",
+        "esp32",
+        "C++"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
       "id": "github:66b15448c87b",
@@ -398,7 +503,7 @@
       "title": "makerspet/oomwoo",
       "url": "https://github.com/makerspet/oomwoo",
       "summary": "Open-source vacuum robot cleaner",
-      "published_at": "2026-11-11T09:14:48Z",
+      "published_at": "2026-11-11T13:00:47Z",
       "image": null,
       "tags": [
         "github",
@@ -411,7 +516,25 @@
         "home-assistant"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
+    {
+      "id": "arduino-forum:c319a24e0842",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Arduino Q allowing python udp",
+      "url": "https://forum.arduino.cc/t/arduino-q-allowing-python-udp/1467197",
+      "summary": "",
+      "published_at": "2026-11-11T12:48:51Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "github:e11d07998511",
@@ -422,7 +545,7 @@
       "title": "tinygo-org/tinygo",
       "url": "https://github.com/tinygo-org/tinygo",
       "summary": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.",
-      "published_at": "2026-11-11T09:14:02Z",
+      "published_at": "2026-11-11T12:34:34Z",
       "image": null,
       "tags": [
         "github",
@@ -435,28 +558,69 @@
         "i2c"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
-      "id": "github:c910da55360c",
+      "id": "github:694a788ea181",
       "source_id": "github",
       "source_name": "GitHub",
       "category": "hardware",
       "language": "multi",
-      "title": "espressif/arduino-esp32",
-      "url": "https://github.com/espressif/arduino-esp32",
-      "summary": "Arduino core for the ESP32 family of SoCs",
-      "published_at": "2026-11-11T07:56:22Z",
+      "title": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota",
+      "summary": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",
+      "published_at": "2026-11-11T11:24:24Z",
       "image": null,
       "tags": [
         "github",
         "arduino",
-        "esp-idf",
+        "automation",
         "esp32",
-        "C++"
+        "esp8266",
+        "firmware",
+        "iot",
+        "knx"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
+    {
+      "id": "github:e1062c116d4e",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "arduino/Arduino",
+      "url": "https://github.com/arduino/Arduino",
+      "summary": "Arduino IDE 1.x",
+      "published_at": "2026-11-11T10:38:22Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "ide",
+        "Java"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:20Z"
+    },
+    {
+      "id": "arduino-forum:a20f09557990",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Modbus RTU communication between ESP32 and particle counter not working",
+      "url": "https://forum.arduino.cc/t/modbus-rtu-communication-between-esp32-and-particle-counter-not-working/1467179",
+      "summary": "",
+      "published_at": "2026-11-11T10:37:00Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "github:efd98bb82151",
@@ -480,55 +644,7 @@
         "hacktoberfest"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
-    },
-    {
-      "id": "github:f6bc45260818",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "rwaldron/johnny-five",
-      "url": "https://github.com/rwaldron/johnny-five",
-      "summary": "JavaScript Robotics and IoT programming framework, developed at Bocoup.",
-      "published_at": "2026-11-11T03:35:04Z",
-      "image": null,
-      "tags": [
-        "github",
-        "1-wire",
-        "adc",
-        "arduino",
-        "beaglebone-black",
-        "bluetooth",
-        "chip",
-        "dac"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
-    },
-    {
-      "id": "github:5eb1dfecd9f1",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "justcallmekoko/ESP32Marauder",
-      "url": "https://github.com/justcallmekoko/ESP32Marauder",
-      "summary": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32",
-      "published_at": "2026-11-11T03:34:59Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "beacon",
-        "bluetooth",
-        "command-line",
-        "deauthentication",
-        "defensive",
-        "dualband"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
       "id": "arduino-forum:d4d3c106b120",
@@ -546,49 +662,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
-    },
-    {
-      "id": "github:96fb0ac21537",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "SpacehuhnTech/esp8266_deauther",
-      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
-      "summary": "Affordable WiFi hacking platform for testing and learning",
-      "published_at": "2026-11-11T02:46:48Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "attack",
-        "board",
-        "deauth",
-        "deauther",
-        "esp8266",
-        "hack"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
-    },
-    {
-      "id": "arduino-forum:7e8b70aed7eb",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Hilarious! People think Canadians don't fight!",
-      "url": "https://forum.arduino.cc/t/hilarious-people-think-canadians-dont-fight/1467159",
-      "summary": "",
-      "published_at": "2026-11-11T02:18:15Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "github:88f8faa04665",
@@ -612,7 +686,7 @@
         "embedded"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
       "id": "github:cfd3280c7b8c",
@@ -636,27 +710,7 @@
         "hardware"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
-    },
-    {
-      "id": "github:e1062c116d4e",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "arduino/Arduino",
-      "url": "https://github.com/arduino/Arduino",
-      "summary": "Arduino IDE 1.x",
-      "published_at": "2026-11-10T20:54:09Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "ide",
-        "Java"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:50Z"
+      "fetched_at": "2026-11-11T13:57:20Z"
     },
     {
       "id": "arduino-forum:7e0a7a00fa54",
@@ -674,25 +728,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
-    },
-    {
-      "id": "arduino-forum:fd2680d8f6ec",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Unable to read pin 13 on the Arduino Uno R4 Minima",
-      "url": "https://forum.arduino.cc/t/unable-to-read-pin-13-on-the-arduino-uno-r4-minima/1467108",
-      "summary": "",
-      "published_at": "2026-11-10T12:46:14Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "arduino-forum:bf603f7a439e",
@@ -710,7 +746,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "arduino-forum:059c2bece625",
@@ -728,7 +764,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "makezine:68e22e1ddd9a",
@@ -746,7 +782,8 @@
         "Maker Faire"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:6801ee1e5c0c",
@@ -769,7 +806,8 @@
         "young makers"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "adafruit:926ea69b574c",
@@ -784,7 +822,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "makezine:08ce752f7ced",
@@ -803,7 +842,8 @@
         "Rome"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:a261771adb9b",
@@ -827,7 +867,8 @@
         "prop"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:67331edb62ac",
@@ -850,7 +891,8 @@
         "star wars"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:175bbb5b1fec",
@@ -870,7 +912,26 @@
         "film festival"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
+    },
+    {
+      "id": "arduino-forum:96aabb878f22",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Problems with DFPlayer Mini",
+      "url": "https://forum.arduino.cc/t/problems-with-dfplayer-mini/1466100",
+      "summary": "",
+      "published_at": "2026-11-01T16:52:08Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "arduino-forum:416148fd12ba",
@@ -888,7 +949,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "makezine:a89a19336d4a",
@@ -907,7 +968,8 @@
         "Halloween"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:e8b08e459890",
@@ -931,7 +993,8 @@
         "star wars"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:753f579accda",
@@ -950,7 +1013,8 @@
         "Kids & Family"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "makezine:5a7f81a0a9bd",
@@ -971,7 +1035,8 @@
         "Transportation"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:35Z"
+      "fetched_at": "2026-11-11T10:16:35Z",
+      "stale": true
     },
     {
       "id": "adafruit:80e475b8d3ec",
@@ -986,7 +1051,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:052d568e0f53",
@@ -1001,7 +1067,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:5c8687413ba6",
@@ -1016,43 +1083,26 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
-      "id": "arduino-forum:51c138242293",
+      "id": "arduino-forum:a52b98b987cf",
       "source_id": "arduino-forum",
       "source_name": "Arduino Forum",
       "category": "electronica",
       "language": "multi",
-      "title": "Help making a set of C++ Classes",
-      "url": "https://forum.arduino.cc/t/help-making-a-set-of-c-classes/1465284",
+      "title": "A darkroom enlarger lightmeter",
+      "url": "https://forum.arduino.cc/t/a-darkroom-enlarger-lightmeter/1464893",
       "summary": "",
-      "published_at": "2026-10-26T12:57:04Z",
+      "published_at": "2026-10-23T12:24:26Z",
       "image": null,
       "tags": [
         "arduino",
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
-    },
-    {
-      "id": "arduino-forum:da8d9dfc7a9a",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Looking for Arduino and ESP32 Volunteers to Help Street Cats in the UAE",
-      "url": "https://forum.arduino.cc/t/looking-for-arduino-and-esp32-volunteers-to-help-street-cats-in-the-uae/1465257",
-      "summary": "",
-      "published_at": "2026-10-26T10:42:45Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "adafruit:5ddddfd13b1f",
@@ -1067,7 +1117,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:1f74e7b2456e",
@@ -1082,7 +1133,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:576657ff415a",
@@ -1097,7 +1149,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:6edcf9b9c0ff",
@@ -1112,7 +1165,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:faf64a9a9253",
@@ -1127,7 +1181,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:ba6b79839a05",
@@ -1142,25 +1197,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
-    },
-    {
-      "id": "arduino-forum:ac3074cc2e0d",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "IDE not displaying right on Win10",
-      "url": "https://forum.arduino.cc/t/ide-not-displaying-right-on-win10/1462065",
-      "summary": "",
-      "published_at": "2026-10-03T15:10:17Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "adafruit:c75c5681babc",
@@ -1175,43 +1213,26 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
-      "id": "arduino-forum:f86e5fc483dc",
+      "id": "arduino-forum:6dfc6b91d667",
       "source_id": "arduino-forum",
       "source_name": "Arduino Forum",
       "category": "electronica",
       "language": "multi",
-      "title": "12 button wireless buzzer game - ambitious?",
-      "url": "https://forum.arduino.cc/t/12-button-wireless-buzzer-game-ambitious/1459529",
+      "title": "Discourse update notifications",
+      "url": "https://forum.arduino.cc/t/discourse-update-notifications/1457903",
       "summary": "",
-      "published_at": "2026-09-14T11:30:35Z",
+      "published_at": "2026-09-01T09:49:02Z",
       "image": null,
       "tags": [
         "arduino",
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
-    },
-    {
-      "id": "arduino-forum:0113dc3ec38c",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "This gave me a smile this morning",
-      "url": "https://forum.arduino.cc/t/this-gave-me-a-smile-this-morning/1457557",
-      "summary": "",
-      "published_at": "2026-08-29T04:44:47Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-11T10:16:47Z"
+      "fetched_at": "2026-11-11T13:57:18Z"
     },
     {
       "id": "inventable:b86252277a3a",
@@ -1235,7 +1256,8 @@
         "leds"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:d6122a396041",
@@ -1259,7 +1281,8 @@
         "tiras de leds"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:04b5303581fd",
@@ -1281,7 +1304,8 @@
         "proyectos didácticos"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:f0c2e202c9c4",
@@ -1302,7 +1326,8 @@
         "semáforo"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:fa5eb1622ef1",
@@ -1321,7 +1346,8 @@
         "semáforo"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:05e0824b1f99",
@@ -1339,7 +1365,8 @@
         "felices fiestas"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:e3ee268cc9fe",
@@ -1363,7 +1390,8 @@
         "Génova"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:148721e5e717",
@@ -1384,7 +1412,8 @@
         "relés"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "inventable:444bdaab13c2",
@@ -1405,7 +1434,8 @@
         "inventable"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:44Z"
+      "fetched_at": "2026-11-11T10:16:44Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:aaea419589d5",
@@ -1422,7 +1452,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:12aa2c0a46f3",
@@ -1439,7 +1470,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:93821f202328",
@@ -1456,7 +1488,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:8b53586b1f9b",
@@ -1473,7 +1506,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:12fee35c7fb9",
@@ -1490,7 +1524,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:0c04dfeeac7e",
@@ -1507,7 +1542,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:8cdee9de0070",
@@ -1524,7 +1560,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:68eac2e5c8e6",
@@ -1541,7 +1578,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "adafruit:9ce72787b51b",
@@ -1556,7 +1594,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:38Z"
+      "fetched_at": "2026-11-11T10:16:38Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:a7da8e9792ea",
@@ -1573,7 +1612,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:42cba8917111",
@@ -1590,7 +1630,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:dc3e2dfca583",
@@ -1607,7 +1648,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "raspberrypi:9a94e84de2ce",
@@ -1624,7 +1666,8 @@
         "tutorial"
       ],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:53Z"
+      "fetched_at": "2026-11-11T10:16:53Z",
+      "stale": true
     },
     {
       "id": "hispasonic:6c5807d020e0",
@@ -1639,7 +1682,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:96aa5b007837",
@@ -1654,7 +1698,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:11471a1b878b",
@@ -1669,7 +1714,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:a344e597b271",
@@ -1684,7 +1730,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:b53626210190",
@@ -1699,7 +1746,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:9113efeb99fc",
@@ -1714,7 +1762,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:be3e372fc202",
@@ -1729,7 +1778,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:be634746ae2c",
@@ -1744,7 +1794,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:d74bd967ca68",
@@ -1759,7 +1810,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:6cb7b2b14116",
@@ -1774,7 +1826,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:84e32df653cb",
@@ -1789,7 +1842,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     },
     {
       "id": "hispasonic:fd0c0ec35294",
@@ -1804,7 +1858,8 @@
       "image": null,
       "tags": [],
       "method": "rss",
-      "fetched_at": "2026-11-11T10:16:58Z"
+      "fetched_at": "2026-11-11T10:16:58Z",
+      "stale": true
     }
   ]
 }
