@@ -32,16 +32,20 @@ jobs:
         run: |
           python scripts/actualizar_indice.py --force --verbose
 
-      - name: Commit updated index (if changed)
+      - name: Regenerate embedded data
+        run: |
+          python scripts/generar_data.py
+
+      - name: Commit updated data (if changed)
         env:
           GH_TOKEN: ${{ env.GH_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add indice.json indice.js
+          git add indice.json indice.js data.js
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update daily project index"
+            git commit -m "chore: update daily data"
             git push
           fi
