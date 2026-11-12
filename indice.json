@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T13:54:15Z",
+  "generated_at": "2026-11-12T14:51:37Z",
   "user_agent": "ProjectusIndexer/1.0 (local discovery tool)",
   "sources": [
     {
@@ -54,7 +54,7 @@
       "http_status": null,
       "count": 10,
       "fetched_at": "2026-11-11T10:16:35Z",
-      "duration_ms": 120,
+      "duration_ms": 150,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://makezine.com/feed/"
@@ -96,7 +96,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:38Z",
-      "duration_ms": 275,
+      "duration_ms": 325,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://learn.adafruit.com/feed"
@@ -152,7 +152,7 @@
       "http_status": 403,
       "count": 0,
       "fetched_at": null,
-      "duration_ms": 291,
+      "duration_ms": 298,
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "stale": false,
       "url": "https://electrogeek.com/feed/"
@@ -180,7 +180,7 @@
       "http_status": null,
       "count": 9,
       "fetched_at": "2026-11-11T10:16:44Z",
-      "duration_ms": 1549,
+      "duration_ms": 1560,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.inventable.eu/feed/"
@@ -235,8 +235,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-12T13:54:03Z",
-      "duration_ms": 809,
+      "fetched_at": "2026-11-12T14:51:26Z",
+      "duration_ms": 663,
       "error": null,
       "stale": false,
       "url": "https://forum.arduino.cc/latest.json"
@@ -249,8 +249,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-12T13:54:06Z",
-      "duration_ms": 611,
+      "fetched_at": "2026-11-12T14:51:28Z",
+      "duration_ms": 889,
       "error": null,
       "stale": false,
       "url": "https://api.github.com/search/repositories?q=topic%3Aarduino&sort=stars&order=desc&per_page=12"
@@ -320,7 +320,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:53Z",
-      "duration_ms": 1045,
+      "duration_ms": 1007,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.raspberrypi.com/tutorials/feed/"
@@ -334,7 +334,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:58Z",
-      "duration_ms": 2022,
+      "duration_ms": 1587,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.hispasonic.com/rss"
@@ -357,7 +357,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "github:66b15448c87b",
@@ -381,7 +381,7 @@
         "home-assistant"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:e11d07998511",
@@ -405,7 +405,7 @@
         "i2c"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "arduino-forum:8f5c91193fd5",
@@ -423,7 +423,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "github:c910da55360c",
@@ -444,7 +444,7 @@
         "C++"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "arduino-forum:44f225d100bd",
@@ -462,7 +462,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "github:5eb1dfecd9f1",
@@ -486,7 +486,7 @@
         "dualband"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:e1062c116d4e",
@@ -506,7 +506,7 @@
         "Java"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:88f8faa04665",
@@ -530,7 +530,7 @@
         "embedded"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:96fb0ac21537",
@@ -554,7 +554,7 @@
         "hack"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "arduino-forum:3b5529f3954a",
@@ -572,7 +572,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "github:4afefab3e8c6",
@@ -596,7 +596,7 @@
         "esp32"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:694a788ea181",
@@ -620,7 +620,7 @@
         "knx"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:efd98bb82151",
@@ -644,7 +644,7 @@
         "hacktoberfest"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "github:cfd3280c7b8c",
@@ -668,7 +668,7 @@
         "hardware"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
     },
     {
       "id": "arduino-forum:054bef569eb1",
@@ -686,7 +686,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "arduino-forum:a390e4c70785",
@@ -704,7 +704,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "github:f6bc45260818",
@@ -728,7 +728,25 @@
         "dac"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:06Z"
+      "fetched_at": "2026-11-12T14:51:28Z"
+    },
+    {
+      "id": "arduino-forum:c319a24e0842",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Arduino Q allowing python udp",
+      "url": "https://forum.arduino.cc/t/arduino-q-allowing-python-udp/1467197",
+      "summary": "",
+      "published_at": "2026-11-11T12:48:51Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "arduino-forum:d4d3c106b120",
@@ -746,7 +764,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "arduino-forum:7e8b70aed7eb",
@@ -764,7 +782,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "arduino-forum:bf603f7a439e",
@@ -782,7 +800,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "makezine:68e22e1ddd9a",
@@ -1196,25 +1214,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
-    },
-    {
-      "id": "arduino-forum:f86e5fc483dc",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "12 button wireless buzzer game - ambitious?",
-      "url": "https://forum.arduino.cc/t/12-button-wireless-buzzer-game-ambitious/1459529",
-      "summary": "",
-      "published_at": "2026-09-14T11:30:35Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "arduino-forum:1d007563b228",
@@ -1232,7 +1232,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-12T13:54:03Z"
+      "fetched_at": "2026-11-12T14:51:26Z"
     },
     {
       "id": "inventable:b86252277a3a",
