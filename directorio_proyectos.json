@@ -29,6 +29,21 @@
           "name": "MakersUP",
           "url": "https://makersup.com/",
           "language": "Español"
+        },
+        {
+          "name": "TheHackLab",
+          "url": "https://thehack.la/",
+          "language": "Español",
+          "links": [
+            {
+              "name": "Instagram",
+              "url": "https://www.instagram.com/thehacklab/"
+            },
+            {
+              "name": "YouTube",
+              "url": "https://www.youtube.com/channel/UCSO_exrZUUO0YRDe6l1rw"
+            }
+          ]
         }
       ]
     },

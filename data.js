@@ -29,6 +29,21 @@ window.DIRECTORIO_DATA = {
           "name": "MakersUP",
           "url": "https://makersup.com/",
           "language": "Español"
+        },
+        {
+          "name": "TheHackLab",
+          "url": "https://thehack.la/",
+          "language": "Español",
+          "links": [
+            {
+              "name": "Instagram",
+              "url": "https://www.instagram.com/thehacklab/"
+            },
+            {
+              "name": "YouTube",
+              "url": "https://www.youtube.com/channel/UCSO_exrZUUO0YRDe6l1rw"
+            }
+          ]
         }
       ]
     },
@@ -192,7 +207,7 @@ window.DIRECTORIO_DATA = {
 window.PROYECTOS_DATA = {
   "title": "Catálogo inicial de proyectos",
   "description": "Proyectos reales con enlace a su fuente original. Los campos de documentación solo se marcan como disponibles cuando la fuente los menciona; los valores null significan que no se pudo confirmar. Las clasificaciones de dificultad y presupuesto se indican como estimadas cuando no las declara la fuente.",
-  "last_checked": "2026-11-11",
+  "last_checked": "2026-11-12",
   "projects": [
     {
       "id": "geiger-lanph",
@@ -201,6 +216,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Educational Geiger counter design with a high-voltage module, analog signal conditioning, and Arduino data acquisition. Includes a bill of materials, instructions, schematic, and lab material.",
       "source_name": "GitHub",
       "source_url": "https://github.com/ustajan/Geiger_lanph",
+      "image": "https://raw.githubusercontent.com/ustajan/Geiger_lanph/HEAD/figures/geiger_lanph.png",
+      "image_source": "https://github.com/ustajan/Geiger_lanph",
       "categories": [
         "electronica",
         "instrumentacion",
@@ -236,6 +253,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Alpha, beta, and gamma sensitive Geiger counter with an Arduino Nano, OLED display, custom PCB, and firmware. Includes BOM, schematics, Gerbers, and code.",
       "source_name": "GitHub",
       "source_url": "https://github.com/marbslab/open-source-geiger-counter",
+      "image": "https://opengraph.githubassets.com/1/Marbslab/Open-source-Geiger-counter",
+      "image_source": "https://github.com/marbslab/open-source-geiger-counter",
       "categories": [
         "electronica",
         "instrumentacion",
@@ -271,6 +290,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Portable Geiger counter with an M4011 tube, two-board PCB, seven-segment display, and 3D-printed enclosure. Includes schematics, PCB files, firmware, STL files, and documentation.",
       "source_name": "GitHub",
       "source_url": "https://github.com/KonradWohlfahrt/GeigerCounter",
+      "image": "https://raw.githubusercontent.com/KonradWohlfahrt/GeigerCounter/HEAD/img/Cover_1.jpg",
+      "image_source": "https://github.com/KonradWohlfahrt/GeigerCounter",
       "categories": [
         "electronica",
         "instrumentacion",
@@ -307,6 +328,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Step-by-step weather station project using Arduino and temperature, humidity, and pressure sensors.",
       "source_name": "Instructables",
       "source_url": "https://www.instructables.com/DIY-Weather-Station-Using-Arduino-DHT11-BMP180-Sen/",
+      "image": "https://content.instructables.com/FMH/9U7X/IVO4JV6X/FMH9U7XIVO4JV6X.jpg",
+      "image_source": "https://www.instructables.com/DIY-Weather-Station-Using-Arduino-DHT11-BMP180-Sen/",
       "categories": [
         "electronica",
         "maker"
@@ -342,6 +365,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Wireless weather station documented in nine steps, using Arduino and environmental sensors.",
       "source_name": "Instructables",
       "source_url": "https://www.instructables.com/Arduino-Wireless-Weather-Station/",
+      "image": "https://content.instructables.com/FXY/ZLAA/IQFCF1GH/FXYZLAAIQFCF1GH.png",
+      "image_source": "https://www.instructables.com/Arduino-Wireless-Weather-Station/",
       "categories": [
         "electronica",
         "maker"
@@ -546,6 +571,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Complete documentation for a large-format CNC/3D printer built with OpenBuilds parts: CAD, BOM, a 28-page electrical schematic, and an assembly manual.",
       "source_name": "GitHub",
       "source_url": "https://github.com/Sebastian-Schuetz/OPEN-SOURCE-LARGE-FORMAT-CNC-MACHINE-3D-PRINTER",
+      "image": "https://raw.githubusercontent.com/Sebastian-Schuetz/OPEN-SOURCE-LARGE-FORMAT-CNC-MACHINE-3D-PRINTER/HEAD/Bilder/index.jpg",
+      "image_source": "https://github.com/Sebastian-Schuetz/OPEN-SOURCE-LARGE-FORMAT-CNC-MACHINE-3D-PRINTER",
       "categories": [
         "mecanica",
         "hardware"
@@ -580,6 +607,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Open-source 6-axis robotic arm with 3D-printed cycloidal gearboxes. Includes BOM, assembly instructions, electrical/ROS documentation, and URDF files.",
       "source_name": "GitHub",
       "source_url": "https://github.com/Source-Robotics/Faze4-Robotic-arm",
+      "image": "https://repository-images.githubusercontent.com/203364778/64724e58-d5c5-4e8e-abc6-54edc5bf05d2",
+      "image_source": "https://github.com/Source-Robotics/Faze4-Robotic-arm",
       "categories": [
         "robotica",
         "mecanica",
@@ -615,6 +644,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "High-performance desktop robotic arm with STL files, BOM, assembly instructions, control software, Python API, and ROS2 simulation.",
       "source_name": "GitHub",
       "source_url": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm",
+      "image": "https://raw.githubusercontent.com/Source-Robotics/PAROL6-Desktop-robot-arm/HEAD/Images/img3.png",
+      "image_source": "https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm",
       "categories": [
         "robotica",
         "mecanica",
@@ -650,6 +681,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Educational 3D-printed robotic arm with CAD, STL files, firmware, BOM, and assembly manual in English and Spanish.",
       "source_name": "GitHub",
       "source_url": "https://github.com/BCN3D/BCN3D-Moveo",
+      "image": "https://opengraph.githubassets.com/1/BCN3D/BCN3D-Moveo",
+      "image_source": "https://github.com/BCN3D/BCN3D-Moveo",
       "categories": [
         "robotica",
         "mecanica",
@@ -685,6 +718,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Low-cost robotic arm designed for Hugging Face's LeRobot library. Includes BOM, STL files, printing guide, assembly, and teleoperation documentation.",
       "source_name": "GitHub",
       "source_url": "https://github.com/TheRobotStudio/SO-ARM100/",
+      "image": "https://github.com/user-attachments/assets/e814ed0a-72ce-43ad-80bf-5f03b7f16b90",
+      "image_source": "https://github.com/TheRobotStudio/SO-ARM100/",
       "categories": [
         "robotica",
         "mecanica",
@@ -755,6 +790,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Resources and assembly guide for the Oracle Raspberry Pi Weather Station for schools, with software and installation documentation.",
       "source_name": "GitHub",
       "source_url": "https://github.com/raspberrypilearning/weather-station-guide",
+      "image": "https://raw.githubusercontent.com/raspberrypilearning/weather-station-guide/HEAD/images/weather-station-kit.png",
+      "image_source": "https://github.com/raspberrypilearning/weather-station-guide",
       "categories": [
         "raspberry",
         "electronica",
@@ -790,6 +827,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Open-hardware DSP platform with a Class D amplifier based on the TDA7498/TDA7492. Includes KiCad files, Gerbers, BOM, schematics, and documentation.",
       "source_name": "GitHub",
       "source_url": "https://github.com/ohdsp/AmpOne",
+      "image": "https://opengraph.githubassets.com/1/ohdsp/AmpOne",
+      "image_source": "https://github.com/ohdsp/AmpOne",
       "categories": [
         "audio",
         "electronica",
@@ -825,6 +864,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "PCB for a TPA3128D2 stereo Class D amplifier with schematics, Gerbers, and BOM.",
       "source_name": "GitHub",
       "source_url": "https://github.com/tonyp7/TPA3128D2-Audio-Amplifier",
+      "image": "https://raw.githubusercontent.com/tonyp7/TPA3128D2-Audio-Amplifier/HEAD/TPA3128D2-bench.jpg",
+      "image_source": "https://github.com/tonyp7/TPA3128D2-Audio-Amplifier",
       "categories": [
         "audio",
         "electronica",
@@ -860,6 +901,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "45 W per channel Class AB amplifier with an input selector, PGA2311 digital volume control, and LM3886 output stages. Complete documentation, KiCad, Gerbers, BOM, and STM32 firmware.",
       "source_name": "GitHub",
       "source_url": "https://github.com/dmsd-lab/AMP8611",
+      "image": "https://raw.githubusercontent.com/dmsd-lab/AMP8611/HEAD/face.jpg",
+      "image_source": "https://github.com/dmsd-lab/AMP8611",
       "categories": [
         "audio",
         "electronica",
@@ -895,6 +938,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Stereo 2×70 W or bridged 280 W mono amplifier based on the TDA7293, with on-board power supply and speaker protection. Includes KiCad, BOM, Gerbers, and PDFs.",
       "source_name": "GitHub",
       "source_url": "https://github.com/f4hpu/tda_bridge",
+      "image": "https://repository-images.githubusercontent.com/560831268/8c6a094d-ba7b-4e02-9035-cc5b7e85677f",
+      "image_source": "https://github.com/f4hpu/tda_bridge",
       "categories": [
         "audio",
         "electronica",
@@ -930,6 +975,8 @@ window.PROYECTOS_DATA = {
       "summary_en": "Compact 2×10 W Bluetooth amplifier with an interactive BOM, KiCad schematic, production files, and a 3D-printed enclosure.",
       "source_name": "GitHub",
       "source_url": "https://github.com/T76-org/amply",
+      "image": "https://raw.githubusercontent.com/T76-org/amply/HEAD/images/amply-1.jpg",
+      "image_source": "https://github.com/T76-org/amply",
       "categories": [
         "audio",
         "electronica",
@@ -1441,6 +1488,217 @@ window.PROYECTOS_DATA = {
         "taller"
       ],
       "last_checked": "2026-11-11"
+    },
+    {
+      "id": "thehacklab-duki-pinball",
+      "featured": true,
+      "title": "Pinball personalizado de Duki (World Tour 2025)",
+      "summary_es": "Máquina de pinball personalizada con la identidad del World Tour 2025 de Duki: arte propio, iluminación y mecánica adaptadas a una pieza jugable única.",
+      "summary_en": "Custom pinball machine built around Duki's 2025 World Tour identity, with custom art, lighting, and mechanics adapted into a one-off playable piece.",
+      "source_name": "TheHackLab",
+      "source_url": "https://thehack.la/#proyecto-duki",
+      "image": "https://thehack.la/portfolio-assets/duki.jpg",
+      "image_source": "https://thehack.la/#proyecto-duki",
+      "categories": [
+        "mecanica",
+        "electronica",
+        "hardware"
+      ],
+      "language": "es",
+      "difficulty": "avanzado",
+      "difficulty_estimated": true,
+      "estimated_budget": null,
+      "materials_list_available": null,
+      "schematics_available": null,
+      "cad_files_available": null,
+      "source_code_available": null,
+      "build_instructions_available": null,
+      "test_results_available": null,
+      "safety_warning": true,
+      "safety_note_es": "Máquina electromecánica con partes móviles y tensión de red. Desconecta la alimentación antes de intervenir y usa protección durante las pruebas.",
+      "safety_note_en": "Electromechanical machine with moving parts and mains voltage. Disconnect power before working on it and use protection during testing.",
+      "notes_es": "El portfolio muestra fotos y videos del proceso; no se publican planos, CAD ni lista de materiales descargables. También se documenta en Instagram (@thehacklab).",
+      "notes_en": "The portfolio shows photos and process videos; no downloadable plans, CAD, or bill of materials are published. Also documented on Instagram (@thehacklab).",
+      "tags": [
+        "pinball",
+        "duki",
+        "maquina-arcade",
+        "iluminacion",
+        "arte",
+        "musica",
+        "thehacklab",
+        "joan-manuel-hidalgo"
+      ],
+      "last_checked": "2026-11-12"
+    },
+    {
+      "id": "thehacklab-afa-pinball",
+      "featured": true,
+      "title": "Pinball de la Selección Argentina (La Escaloneta)",
+      "summary_es": "Restauración y transformación de un pinball de Las Tortugas Ninja en un homenaje a la Selección Argentina: rampas y piezas impresas en 3D, más de 400 sonidos, iluminación y arte propio.",
+      "summary_en": "Restoration and transformation of a Teenage Mutant Ninja Turtles pinball into an Argentina national team tribute: 3D-printed ramps and parts, over 400 sounds, lighting, and custom art.",
+      "source_name": "TheHackLab",
+      "source_url": "https://thehack.la/#proyecto-afa",
+      "image": "https://thehack.la/portfolio-assets/afa.jpg",
+      "image_source": "https://thehack.la/#proyecto-afa",
+      "categories": [
+        "mecanica",
+        "electronica",
+        "hardware"
+      ],
+      "language": "es",
+      "difficulty": "avanzado",
+      "difficulty_estimated": true,
+      "estimated_budget": null,
+      "materials_list_available": null,
+      "schematics_available": null,
+      "cad_files_available": null,
+      "source_code_available": null,
+      "build_instructions_available": null,
+      "test_results_available": null,
+      "safety_warning": true,
+      "safety_note_es": "Máquina electromecánica con partes móviles y tensión de red. Desconecta la alimentación antes de intervenir y usa protección durante las pruebas.",
+      "safety_note_en": "Electromechanical machine with moving parts and mains voltage. Disconnect power before working on it and use protection during testing.",
+      "notes_es": "El proceso se documentó en el portfolio y en redes; no se publican archivos CAD ni instrucciones de construcción.",
+      "notes_en": "The process was documented on the portfolio and social media; no CAD files or build instructions are published.",
+      "tags": [
+        "pinball",
+        "seleccion-argentina",
+        "afa",
+        "restauracion",
+        "impresion-3d",
+        "sonido",
+        "thehacklab",
+        "joan-manuel-hidalgo"
+      ],
+      "last_checked": "2026-11-12"
+    },
+    {
+      "id": "thehacklab-boxeo-arcade",
+      "featured": true,
+      "title": "Boxeo arcade: máquina de golpe con puntaje",
+      "summary_es": "Máquina de boxeo arcade desarrollada desde cero: diseño y construcción mecánica, sistema de golpe y medición, y programación de la lógica de juego y el puntaje.",
+      "summary_en": "Arcade boxing machine built from scratch: mechanical design and construction, strike and measurement system, and game and score logic programming.",
+      "source_name": "TheHackLab",
+      "source_url": "https://thehack.la/#proyecto-boxeo",
+      "image": "https://thehack.la/portfolio-assets/boxeo.jpg",
+      "image_source": "https://thehack.la/#proyecto-boxeo",
+      "categories": [
+        "mecanica",
+        "electronica",
+        "hardware"
+      ],
+      "language": "es",
+      "difficulty": "avanzado",
+      "difficulty_estimated": true,
+      "estimated_budget": null,
+      "materials_list_available": null,
+      "schematics_available": null,
+      "cad_files_available": null,
+      "source_code_available": null,
+      "build_instructions_available": null,
+      "test_results_available": null,
+      "safety_warning": true,
+      "safety_note_es": "Mecanismo de golpe con partes móviles; riesgo de golpes y atrapamiento. Usa protecciones y mantén distancia durante las pruebas.",
+      "safety_note_en": "Strike mechanism with moving parts; risk of impact and pinch hazards. Use guards and keep a safe distance during testing.",
+      "notes_es": "El portfolio muestra renders CAD, fotos de fabricación y videos de funcionamiento; no se publican los archivos ni el código.",
+      "notes_en": "The portfolio shows CAD renders, fabrication photos, and operation videos; the files and code are not published.",
+      "tags": [
+        "arcade",
+        "boxeo",
+        "maquina",
+        "electronica",
+        "juego",
+        "puntaje",
+        "thehacklab",
+        "joan-manuel-hidalgo"
+      ],
+      "last_checked": "2026-11-12"
+    },
+    {
+      "id": "thehacklab-funlab-perfume",
+      "featured": true,
+      "title": "FUNLAB: expendedora automática de perfumes",
+      "summary_es": "Máquina expendedora de perfumes totalmente automática: selección de producto, pago electrónico con Mercado Pago y dosificación automática integrados en un solo equipo.",
+      "summary_en": "Fully automatic perfume vending machine: product selection, Mercado Pago electronic payment, and automatic dispensing integrated into one machine.",
+      "source_name": "TheHackLab",
+      "source_url": "https://thehack.la/#proyecto-perfume",
+      "image": "https://thehack.la/portfolio-assets/perfume.jpg",
+      "image_source": "https://thehack.la/#proyecto-perfume",
+      "categories": [
+        "mecanica",
+        "electronica",
+        "hardware"
+      ],
+      "language": "es",
+      "difficulty": "avanzado",
+      "difficulty_estimated": true,
+      "estimated_budget": null,
+      "materials_list_available": null,
+      "schematics_available": null,
+      "cad_files_available": null,
+      "source_code_available": null,
+      "build_instructions_available": null,
+      "test_results_available": null,
+      "safety_warning": true,
+      "safety_note_es": "Máquina con partes móviles, dosificación y pago electrónico; riesgo eléctrico y de atrapamiento. Realiza el mantenimiento con la máquina desenergizada.",
+      "safety_note_en": "Machine with moving parts, dispensing, and electronic payment; electrical and pinch hazards. Perform maintenance with the machine de-energized.",
+      "notes_es": "Sitio del producto: https://perfume.funlab.com.ar/. El portfolio muestra renders CAD y fotos de fabricación; no se publican archivos ni código.",
+      "notes_en": "Product site: https://perfume.funlab.com.ar/. The portfolio shows CAD renders and fabrication photos; files and code are not published.",
+      "tags": [
+        "vending",
+        "perfumes",
+        "automatizacion",
+        "mercado-pago",
+        "hardware",
+        "software",
+        "thehacklab",
+        "joan-manuel-hidalgo"
+      ],
+      "last_checked": "2026-11-12"
+    },
+    {
+      "id": "thehacklab-helios",
+      "featured": true,
+      "title": "Helios: barra LED RGB open source con ESP8266",
+      "summary_es": "Barra LED RGB controlable por WiFi con hub basado en ESP8266, firmware, herramienta de actualización y API HTTP documentada. Proyecto open source de TheHackLab bajo licencia MIT.",
+      "summary_en": "WiFi-controlled RGB LED bar with an ESP8266-based hub, firmware, updater tool, and documented HTTP API. An open-source TheHackLab project under the MIT license.",
+      "source_name": "TheHackLab",
+      "source_url": "https://github.com/TheHackLife/helios",
+      "image": "https://i.imgur.com/tOEysie.png",
+      "image_source": "https://github.com/TheHackLife/helios",
+      "categories": [
+        "electronica",
+        "iot",
+        "hardware"
+      ],
+      "language": "es",
+      "difficulty": "intermedio",
+      "difficulty_estimated": true,
+      "estimated_budget": null,
+      "materials_list_available": null,
+      "schematics_available": null,
+      "cad_files_available": null,
+      "source_code_available": true,
+      "build_instructions_available": true,
+      "test_results_available": null,
+      "safety_warning": false,
+      "safety_note_es": null,
+      "safety_note_en": null,
+      "notes_es": "El README documenta instalación, modos, API y conexiones; el firmware y el actualizador están en Releases. Licencia MIT.",
+      "notes_en": "The README documents installation, modes, API, and wiring; firmware and updater are in Releases. MIT license.",
+      "tags": [
+        "helios",
+        "led",
+        "rgb",
+        "esp8266",
+        "iot",
+        "wifi",
+        "open-source",
+        "thehacklab",
+        "joan-manuel-hidalgo"
+      ],
+      "last_checked": "2026-11-12"
     }
   ]
 };

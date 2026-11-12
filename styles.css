@@ -312,14 +312,17 @@ svg {
   z-index: 40;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 18px 24px;
+  padding: 14px 24px;
   backdrop-filter: blur(14px);
-  background: linear-gradient(to bottom, rgba(11, 15, 20, 0.86), rgba(11, 15, 20, 0.55));
+  background: linear-gradient(to bottom, rgba(11, 15, 20, 0.92), rgba(11, 15, 20, 0.68));
+}
+
+.header-search {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 760px;
 }
 
 [data-theme="light"] .site-header {
@@ -582,7 +585,12 @@ main {
 
 .search-all {
   flex: none;
-  white-space: nowrap;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
 }
 
 .quick-tags {
@@ -697,14 +705,14 @@ main {
 
 .tab-panel {
   animation: fade-in 0.18s ease;
+  scroll-margin-top: 90px;
 }
 
 .filters {
   margin-top: 16px;
-  padding: 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--bg-elev), var(--bg-soft));
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .filters-head {
@@ -737,16 +745,16 @@ main {
 }
 
 .filter-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
 }
 
 .filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -811,6 +819,194 @@ main {
   height: 16px;
   accent-color: var(--accent);
   cursor: pointer;
+}
+
+.inspiring-section {
+  margin-top: 32px;
+}
+
+.inspiring-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.inspiring-carousel {
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 24%;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-color: var(--border-strong);
+  border-radius: 50%;
+  background: var(--bg-elev);
+  box-shadow: var(--shadow);
+  transform: translateY(-50%);
+}
+
+.carousel-btn-prev {
+  left: 8px;
+}
+
+.carousel-btn-next {
+  right: 8px;
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.inspiring-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.inspiring-track::-webkit-scrollbar {
+  display: none;
+}
+
+.inspiring-card {
+  display: flex;
+  flex: 0 0 calc((100% - 48px) / 4);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  color: inherit;
+  text-decoration: none;
+  scroll-snap-align: start;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.inspiring-card:hover,
+.inspiring-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow);
+}
+
+.inspiring-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.inspiring-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.inspiring-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.inspiring-card:hover .inspiring-media img {
+  transform: scale(1.03);
+}
+
+.inspiring-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px 16px;
+}
+
+.inspiring-body h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 800;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.inspiring-body p {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.84rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.inspiring-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .inspiring-section {
+    margin-top: 24px;
+  }
+
+  .inspiring-card {
+    flex-basis: 100%;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-btn-prev {
+    left: 6px;
+  }
+
+  .carousel-btn-next {
+    right: 6px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .inspiring-section {
+    margin-top: 24px;
+  }
+
+  .inspiring-card {
+    flex-basis: calc((100% - 32px) / 3);
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-btn-prev {
+    left: 6px;
+  }
+
+  .carousel-btn-next {
+    right: 6px;
+  }
 }
 
 .results-section {
@@ -1673,10 +1869,75 @@ main {
 
 @media (max-width: 820px) {
   .site-header {
-    padding: 14px 18px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 12px 16px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    height: 34px;
+  }
+
+  .brand h1.brand-wordmark {
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: calc(100% - 165px);
+  }
+
+  .brand-text {
+    min-width: 0;
   }
 
   .brand p {
+    font-size: 0.72rem;
+    line-height: 1.15;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .header-actions {
+    flex: 0 0 auto;
+    margin-left: auto;
+    gap: 6px;
+  }
+
+  .donate-btn {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  .lang-toggle {
+    padding: 4px 7px;
+    font-size: 0.7rem;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-search {
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+
+  .search-box {
+    padding: 8px 10px;
+  }
     font-size: 0.72rem;
     white-space: normal;
     line-height: 1.2;
@@ -1693,19 +1954,20 @@ main {
   }
 
   .search-box {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-radius: 20px;
-    padding: 12px;
+    padding: 8px 10px;
   }
 
   .search-box input {
-    flex: 1 1 calc(100% - 36px);
+    flex: 1 1 auto;
+    min-width: 0;
     padding: 8px 0;
   }
 
   .search-all {
-    width: 100%;
-    margin-top: 4px;
+    width: 42px;
+    margin-top: 0;
   }
 
   .projects-grid,

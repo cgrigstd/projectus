@@ -30,6 +30,21 @@
         <p data-i18n="appSubtitle">Encuentra proyectos documentados, desde nivel inicial hasta ingeniería.</p>
       </div>
     </div>
+    <div class="header-search">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input id="searchInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="searchPlaceholder" placeholder="Busca por tema, tecnología o material (ej. Geiger, CNC, Arduino)..." aria-label="Buscar proyectos" />
+        <button id="searchAllBtn" class="icon-btn search-all" type="button" data-i18n-aria-label="searchAll" aria-label="Buscar en todas las fuentes" title="Buscar en todas las fuentes">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
     <div class="header-actions">
       <button class="btn btn-primary donate-btn" type="button" data-action="open-donation" data-i18n="donateButton">Donar</button>
       <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema">
@@ -50,18 +65,36 @@
   <main id="main">
     <section class="hero" aria-labelledby="heroTitle">
       <h2 id="heroTitle" class="sr-only" data-i18n="heroTitle">Buscar proyectos</h2>
-      <div class="search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7" />
-          <path d="m20 20-3.5-3.5" />
-        </svg>
-        <input id="searchInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="searchPlaceholder" placeholder="Busca por tema, tecnología o material (ej. Geiger, CNC, Arduino)..." aria-label="Buscar proyectos" />
-        <button id="searchAllBtn" class="btn btn-primary search-all" type="button">
-          <span data-i18n="searchAll">Buscar en todas las fuentes</span>
+      <section class="filters" aria-labelledby="filtersTitle">
+        <div class="filter-grid">
+          <div class="filter-group" data-tab-filter="news">
+            <label for="sourceFilter" data-i18n="source">Fuente</label>
+            <select id="sourceFilter"></select>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="inspiring-section" aria-labelledby="inspiringTitle">
+      <div class="section-head">
+        <div class="inspiring-copy">
+          <h2 id="inspiringTitle" data-i18n="inspiringTitle">Proyectos que inspiran...</h2>
+          <p class="section-hint" data-i18n="inspiringHint">Proyectos terminados de TheHackLab. Abre cada uno para ver el proyecto original.</p>
+        </div>
+      </div>
+      <div class="inspiring-carousel">
+        <button class="icon-btn carousel-btn carousel-btn-prev" type="button" data-action="carousel-prev" data-i18n-aria-label="carouselPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <div id="inspiringTrack" class="inspiring-track" role="group" tabindex="0" data-i18n-aria-label="inspiringTitle" aria-label="Proyectos que inspiran..."></div>
+        <button class="icon-btn carousel-btn carousel-btn-next" type="button" data-action="carousel-next" data-i18n-aria-label="carouselNext" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </button>
       </div>
-      <div id="quickTags" class="quick-tags" aria-label="Temas rápidos"></div>
-      <div id="stats" class="stats" aria-live="polite"></div>
     </section>
 
     <nav class="tabs" role="tablist" aria-label="Secciones" data-i18n-aria-label="sections">
@@ -79,42 +112,7 @@
       </button>
     </nav>
 
-    <section class="filters" aria-labelledby="filtersTitle">
-      <div class="filters-head">
-        <h2 id="filtersTitle" data-i18n="filters">Filtros</h2>
-        <button id="clearFilters" class="link-btn" type="button" data-i18n="clearFilters">Limpiar filtros</button>
-      </div>
-      <div class="filter-grid">
-        <div class="filter-group" data-tab-filter="projects sources news">
-          <label for="categoryFilter" data-i18n="category">Categoría</label>
-          <select id="categoryFilter"></select>
-        </div>
-        <div class="filter-group" data-tab-filter="projects sources news">
-          <label for="languageFilter" data-i18n="language">Idioma</label>
-          <select id="languageFilter"></select>
-        </div>
-        <div class="filter-group" data-tab-filter="projects">
-          <label for="difficultyFilter" data-i18n="difficulty">Nivel</label>
-          <select id="difficultyFilter"></select>
-        </div>
-        <div class="filter-group" data-tab-filter="projects">
-          <label for="docFilter" data-i18n="documentation">Documentación</label>
-          <select id="docFilter"></select>
-        </div>
-        <div class="filter-group" data-tab-filter="news">
-          <label for="sourceFilter" data-i18n="source">Fuente</label>
-          <select id="sourceFilter"></select>
-        </div>
-        <div class="filter-group" data-tab-filter="projects news">
-          <label for="sortSelect" data-i18n="sort">Ordenar</label>
-          <select id="sortSelect"></select>
-        </div>
-        <label class="favorite-filter" for="favoritesOnly" data-tab-filter="projects">
-          <input id="favoritesOnly" type="checkbox" />
-          <span data-i18n="favoritesOnly">Solo favoritos</span>
-        </label>
-      </div>
-    </section>
+    <div id="stats" class="stats" aria-live="polite"></div>
 
     <div id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
       <section class="results-section" aria-labelledby="projectsTitle">

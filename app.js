@@ -93,6 +93,7 @@
     "Hackster.io": { key: "maker", lang: "en", search: "https://www.hackster.io/search?q={q}", tags: ["iot", "hardware"] },
     "Make:": { key: "maker", lang: "en", search: "https://makezine.com/?s={q}", tags: ["maker"] },
     "MakersUP": { key: "maker", lang: "es", search: "https://makersup.com/?s={q}", tags: ["maker", "es"] },
+    "TheHackLab": { key: "maker", lang: "es", search: null, tags: ["maker", "portfolio", "es", "pinball", "hardware"] },
     "Arduino Project Hub": { key: "electronica", lang: "en", search: null, tags: ["arduino"] },
     "Adafruit Learning System": { key: "electronica", lang: "en", search: null, tags: ["adafruit", "electronica"] },
     "SparkFun": { key: "electronica", lang: "en", search: null, tags: ["electronica"] },
@@ -149,6 +150,11 @@
       clearFilters: "Limpiar filtros",
       projects: "Proyectos",
       projectsHint: "Fichas con enlace a la fuente original y estado de su documentación.",
+      inspiringTitle: "Proyectos que inspiran...",
+      inspiringHint: "Proyectos terminados de TheHackLab. Abre cada uno para ver el proyecto original.",
+      inspiringOpen: "Abrir proyecto",
+      carouselPrev: "Anterior",
+      carouselNext: "Siguiente",
       sources: "Fuentes",
       sourcesHint: "Cada tarjeta genera una búsqueda en el sitio original. La herramienta no extrae contenido automáticamente.",
       suggestedSearches: "Búsquedas sugeridas",
@@ -266,6 +272,11 @@
       clearFilters: "Clear filters",
       projects: "Projects",
       projectsHint: "Cards with a link to the original source and the status of its documentation.",
+      inspiringTitle: "Projects that inspire...",
+      inspiringHint: "Finished TheHackLab projects. Open each one to see the original project.",
+      inspiringOpen: "Open project",
+      carouselPrev: "Previous",
+      carouselNext: "Next",
       sources: "Sources",
       sourcesHint: "Each card generates a search on the original site. The tool does not scrape content automatically.",
       suggestedSearches: "Suggested searches",
@@ -407,6 +418,7 @@
 
   let lastFocused = null;
   let searchTimer = null;
+  let inspiringSignature = "";
 
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -420,6 +432,17 @@
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function uniqueByName(items) {
+    const seen = new Set();
+    return items.filter((item) => {
+      const key = normalize(item && item.name);
+      if (!key) return true;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   }
 
   function escapeHtml(value) {
@@ -541,7 +564,7 @@
   }
 
   function prepareIndex(index) {
-    const sources = index && Array.isArray(index.sources) ? index.sources : [];
+    const sources = uniqueByName(index && Array.isArray(index.sources) ? index.sources : []);
     const items = index && Array.isArray(index.items) ? index.items : [];
     state.index = {
       loaded: Boolean(index && (sources.length > 0 || items.length > 0)),
@@ -729,7 +752,8 @@
             categoryKey: meta.key || categoryKey,
             lang: meta.lang || sourceLangFromNote(link.language),
             search: meta.search || null,
-            tags: meta.tags || []
+            tags: meta.tags || [],
+            links: Array.isArray(link.links) ? link.links : []
           };
           if (categoryKey === "busquedas") {
             suggested.push(item);
@@ -740,8 +764,8 @@
       });
     }
 
-    state.sources = sources;
-    state.suggested = suggested;
+    state.sources = uniqueByName(sources);
+    state.suggested = uniqueByName(suggested);
     state.projects = proyectos && Array.isArray(proyectos.projects) ? proyectos.projects : [];
     prepareIndex(index);
     state.dataLoaded = sources.length > 0 || state.projects.length > 0;
@@ -828,6 +852,17 @@
     if (!query) return true;
     const haystack = projectHaystack(project);
     return query.split(/\s+/).every((term) => haystack.includes(term));
+  }
+
+  function hasActiveProjectFilters() {
+    return (
+      Boolean(state.query.trim()) ||
+      state.category !== "all" ||
+      state.language !== "all" ||
+      state.difficulty !== "all" ||
+      state.doc !== "all" ||
+      state.favoritesOnly
+    );
   }
 
   function matchesSource(source) {
@@ -944,6 +979,8 @@
 
   function projectCard(project) {
     const isFavorite = state.favorites.has(project.id);
+    const thumb = projectThumb(project);
+    const image = safeUrl(project.image) || thumb;
     const summary = state.lang === "es" ? project.summary_es : project.summary_en;
     const docs = DOC_FIELDS.filter((field) => project[field.flag] === true);
     const docBadges = docs.map((field) => `<span class="badge badge-doc">${escapeHtml(docLabel(field.key))}</span>`).join("");
@@ -957,7 +994,7 @@
     return `
       <article class="card project-card" data-id="${escapeHtml(project.id)}">
         <div class="card-media">
-          <img src="${escapeHtml(projectThumb(project))}" data-fallback="assets/thumb-default.svg" alt="" loading="lazy" />
+          <img src="${escapeHtml(image)}" data-fallback="${escapeHtml(thumb)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
         </div>
         <div class="card-top">
           <span class="badge badge-source">${escapeHtml(project.source_name)}</span>
@@ -986,12 +1023,38 @@
     `;
   }
 
+  function inspiringCard(project) {
+    const thumb = projectThumb(project);
+    const image = safeUrl(project.image) || thumb;
+    const summary = state.lang === "es" ? project.summary_es : project.summary_en;
+
+    return `
+      <a class="inspiring-card" href="${escapeHtml(safeUrl(project.source_url))}" target="_blank" rel="noopener noreferrer">
+        <div class="inspiring-media">
+          <img src="${escapeHtml(image)}" data-fallback="${escapeHtml(thumb)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+        </div>
+        <div class="inspiring-body">
+          <span class="badge badge-source">${escapeHtml(project.source_name)}</span>
+          <h3>${escapeHtml(project.title)}</h3>
+          <p>${escapeHtml(summary)}</p>
+          <span class="inspiring-link">${escapeHtml(t("inspiringOpen"))} ${ICONS.external}</span>
+        </div>
+      </a>
+    `;
+  }
+
   function sourceCard(source) {
     const query = state.query.trim();
     const primaryUrl = sourceSearchUrl(source, query);
     const primaryLabel = query ? t("searchThisSite") : t("openSite");
     const googleUrl = googleSiteSearchUrl(source, query);
     const queryBadge = query ? `<span class="badge badge-query">${escapeHtml(query)}</span>` : "";
+    const extraLinks = (source.links || [])
+      .map(
+        (link) =>
+          `<a class="btn btn-ghost" href="${escapeHtml(safeUrl(link.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.name)} ${ICONS.external}</a>`
+      )
+      .join("");
 
     return `
       <article class="card source-card">
@@ -1012,6 +1075,7 @@
         <div class="card-actions">
           <a class="btn btn-primary" href="${escapeHtml(safeUrl(primaryUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(primaryLabel)} ${ICONS.external}</a>
           <a class="btn btn-ghost" href="${escapeHtml(safeUrl(googleUrl))}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(t("searchOnGoogle"))}">Google</a>
+          ${extraLinks}
         </div>
       </article>
     `;
@@ -1060,10 +1124,47 @@
     const count = $("#projectCount");
     if (!grid) return;
 
-    const projects = state.projects.filter(matchesProject).sort(sortProjects);
+    const showFeatured = hasActiveProjectFilters();
+    const projects = state.projects
+      .filter((project) => !project.featured || showFeatured)
+      .filter(matchesProject)
+      .sort(sortProjects);
     if (count) count.textContent = `(${projects.length})`;
     grid.innerHTML = projects.map(projectCard).join("");
     if (empty) empty.hidden = projects.length > 0;
+  }
+
+  function updateCarouselButtons() {
+    const track = $("#inspiringTrack");
+    if (!track) return;
+    const prev = $('[data-action="carousel-prev"]');
+    const next = $('[data-action="carousel-next"]');
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    const atStart = track.scrollLeft <= 2;
+    const atEnd = track.scrollLeft >= maxScroll - 2;
+    if (prev) prev.disabled = atStart;
+    if (next) next.disabled = atEnd;
+  }
+
+  function scrollCarousel(direction) {
+    const track = $("#inspiringTrack");
+    if (!track) return;
+    const card = track.querySelector(".inspiring-card");
+    const amount = card ? card.getBoundingClientRect().width + 16 : track.clientWidth * 0.85;
+    track.scrollBy({ left: direction * amount, behavior: "smooth" });
+  }
+
+  function renderInspiring() {
+    const track = $("#inspiringTrack");
+    if (!track) return;
+    const projects = state.projects.filter((project) => project.featured === true);
+    const signature = `${state.lang}|${projects.map((project) => project.id).join(",")}`;
+    if (signature !== inspiringSignature) {
+      inspiringSignature = signature;
+      track.innerHTML = projects.map(inspiringCard).join("");
+      track.scrollLeft = 0;
+    }
+    requestAnimationFrame(updateCarouselButtons);
   }
 
   function renderSources() {
@@ -1160,6 +1261,7 @@
   function render() {
     renderTabs();
     renderStats();
+    renderInspiring();
     renderProjects();
     renderSources();
     renderSuggested();
@@ -1417,7 +1519,17 @@
     state.query = query;
     const input = $("#searchInput");
     if (input && input.value !== query) input.value = query;
-    render();
+    if (query.trim() && state.activeTab !== "projects") {
+      setActiveTab("projects", { updateHash: false, scroll: false });
+    } else {
+      render();
+    }
+    if (query.trim()) {
+      requestAnimationFrame(() => {
+        const target = $("#panel-projects") || $("#projectsTitle");
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   function clearFilters() {
@@ -1557,6 +1669,12 @@
       });
     });
 
+    const inspiringTrack = $("#inspiringTrack");
+    if (inspiringTrack) {
+      inspiringTrack.addEventListener("scroll", updateCarouselButtons, { passive: true });
+      window.addEventListener("resize", updateCarouselButtons);
+    }
+
     const tabButtons = $$(".tab");
     tabButtons.forEach((button, index) => {
       button.addEventListener("click", () => setActiveTab(button.dataset.tab, { scroll: true }));
@@ -1604,6 +1722,18 @@
       const actionElement = event.target.closest("[data-action]");
       if (!actionElement) return;
       const action = actionElement.dataset.action;
+
+      if (action === "carousel-prev") {
+        event.preventDefault();
+        scrollCarousel(-1);
+        return;
+      }
+
+      if (action === "carousel-next") {
+        event.preventDefault();
+        scrollCarousel(1);
+        return;
+      }
 
       if (action === "toggle-favorite") {
         event.preventDefault();
