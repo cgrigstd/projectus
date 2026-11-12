@@ -14,20 +14,9 @@ La aplicación se ejecuta en el navegador sin backend. Los datos se cargan desde
 - Directorio de fuentes con búsqueda directa en cada sitio.
 - Búsquedas sugeridas para localizar documentación, BOM y planos.
 - Novedades indexadas desde fuentes con API o RSS.
-- Favoritos guardados en el navegador.
 - Interfaz en español e inglés.
 - Tema claro/oscuro.
 - Diseño responsive para desktop y mobile.
-
-## Uso
-
-Abrir `index.html` directamente en el navegador o servir la carpeta con un servidor estático:
-
-```bash
-python -m http.server 8000
-```
-
-Luego abrir `http://localhost:8000`.
 
 ## Archivos principales
 

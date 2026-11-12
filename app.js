@@ -978,7 +978,6 @@
   }
 
   function projectCard(project) {
-    const isFavorite = state.favorites.has(project.id);
     const thumb = projectThumb(project);
     const image = safeUrl(project.image) || thumb;
     const summary = state.lang === "es" ? project.summary_es : project.summary_en;
@@ -998,9 +997,6 @@
         </div>
         <div class="card-top">
           <span class="badge badge-source">${escapeHtml(project.source_name)}</span>
-          <button class="icon-btn favorite${isFavorite ? " is-active" : ""}" type="button" data-action="toggle-favorite" data-id="${escapeHtml(project.id)}" aria-label="${escapeHtml(isFavorite ? t("removeFavorite") : t("addFavorite"))}" title="${escapeHtml(isFavorite ? t("removeFavorite") : t("addFavorite"))}">
-            ${ICONS.star}
-          </button>
         </div>
         <h3 class="card-title">${escapeHtml(project.title)}</h3>
         <p class="card-summary">${escapeHtml(summary)}</p>
@@ -1365,9 +1361,8 @@
     const project = state.projects.find((item) => item.id === id);
     if (!project) return;
 
-    if (!keepFocus) lastFocused = document.activeElement;
-    const isFavorite = state.favorites.has(project.id);
-    const summary = state.lang === "es" ? project.summary_es : project.summary_en;
+     if (!keepFocus) lastFocused = document.activeElement;
+     const summary = state.lang === "es" ? project.summary_es : project.summary_en;
     const notes = state.lang === "es" ? project.notes_es : project.notes_en;
     const safetyNote = state.lang === "es" ? project.safety_note_es : project.safety_note_en;
     const docRows = DOC_FIELDS.map((field) => {
@@ -1416,7 +1411,6 @@
           ${tags ? `<h3>${escapeHtml(t("tags"))}</h3><div class="badge-row">${tags}</div>` : ""}
           <div class="modal-actions">
           <a class="btn btn-primary" href="${escapeHtml(safeUrl(project.source_url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("openSource"))} ${ICONS.external}</a>
-            <button class="btn btn-ghost" type="button" data-action="toggle-favorite" data-id="${escapeHtml(project.id)}">${escapeHtml(isFavorite ? t("removeFavorite") : t("addFavorite"))}</button>
             <button class="btn btn-ghost" type="button" data-action="close-modal">${escapeHtml(t("close"))}</button>
           </div>
         </div>
