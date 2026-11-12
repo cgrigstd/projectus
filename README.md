@@ -38,5 +38,4 @@ Los enlaces siempre apuntan a la fuente original para consultar la documentació
 ## Notas
 
 - La herramienta no extrae contenido automáticamente: enlaza a las fuentes originales.
-- Los favoritos se guardan en `localStorage`.
-- Para actualizar el índice de novedades, ejecutar los scripts disponibles en `scripts/` si están presentes.
+
