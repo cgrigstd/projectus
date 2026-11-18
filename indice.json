@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T15:41:04Z",
+  "generated_at": "2026-11-18T15:20:33Z",
   "user_agent": "ProjectusIndexer/1.0 (local discovery tool)",
   "sources": [
     {
@@ -54,7 +54,7 @@
       "http_status": null,
       "count": 10,
       "fetched_at": "2026-11-11T10:16:35Z",
-      "duration_ms": 114,
+      "duration_ms": 146,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://makezine.com/feed/"
@@ -96,7 +96,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:38Z",
-      "duration_ms": 357,
+      "duration_ms": 237,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://learn.adafruit.com/feed"
@@ -152,7 +152,7 @@
       "http_status": 403,
       "count": 0,
       "fetched_at": null,
-      "duration_ms": 131,
+      "duration_ms": 183,
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "stale": false,
       "url": "https://electrogeek.com/feed/"
@@ -180,7 +180,7 @@
       "http_status": null,
       "count": 9,
       "fetched_at": "2026-11-11T10:16:44Z",
-      "duration_ms": 1516,
+      "duration_ms": 1086,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.inventable.eu/feed/"
@@ -235,8 +235,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-17T15:40:52Z",
-      "duration_ms": 687,
+      "fetched_at": "2026-11-18T15:20:22Z",
+      "duration_ms": 625,
       "error": null,
       "stale": false,
       "url": "https://forum.arduino.cc/latest.json"
@@ -249,8 +249,8 @@
       "status": "ok",
       "http_status": 200,
       "count": 12,
-      "fetched_at": "2026-11-17T15:40:55Z",
-      "duration_ms": 1079,
+      "fetched_at": "2026-11-18T15:20:25Z",
+      "duration_ms": 523,
       "error": null,
       "stale": false,
       "url": "https://api.github.com/search/repositories?q=topic%3Aarduino&sort=stars&order=desc&per_page=12"
@@ -320,7 +320,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:53Z",
-      "duration_ms": 830,
+      "duration_ms": 1061,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.raspberrypi.com/tutorials/feed/"
@@ -334,7 +334,7 @@
       "http_status": null,
       "count": 12,
       "fetched_at": "2026-11-11T10:16:58Z",
-      "duration_ms": 1703,
+      "duration_ms": 1303,
       "error": "TypeError: 'resolve_entities' is an invalid keyword argument for XMLParser()",
       "stale": true,
       "url": "https://www.hispasonic.com/rss"
@@ -350,7 +350,7 @@
       "title": "lvgl/lvgl",
       "url": "https://github.com/lvgl/lvgl",
       "summary": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
-      "published_at": "2026-11-17T15:18:14Z",
+      "published_at": "2026-11-18T14:55:34Z",
       "image": null,
       "tags": [
         "github",
@@ -363,99 +363,7 @@
         "esp32"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:96fb0ac21537",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "SpacehuhnTech/esp8266_deauther",
-      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
-      "summary": "Affordable WiFi hacking platform for testing and learning",
-      "published_at": "2026-11-17T15:04:09Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "attack",
-        "board",
-        "deauth",
-        "deauther",
-        "esp8266",
-        "hack"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:e1062c116d4e",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "arduino/Arduino",
-      "url": "https://github.com/arduino/Arduino",
-      "summary": "Arduino IDE 1.x",
-      "published_at": "2026-11-17T14:58:20Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "ide",
-        "Java"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:66b15448c87b",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "makerspet/oomwoo",
-      "url": "https://github.com/makerspet/oomwoo",
-      "summary": "Open-source vacuum robot cleaner",
-      "published_at": "2026-11-17T14:51:03Z",
-      "image": null,
-      "tags": [
-        "github",
-        "3d-printing",
-        "arduino",
-        "diy-electronics",
-        "diy-project",
-        "esp32",
-        "esp32-arduino",
-        "home-assistant"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:efd98bb82151",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "MarlinFirmware/Marlin",
-      "url": "https://github.com/MarlinFirmware/Marlin",
-      "summary": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers. Marlin supports all common platforms. Many commercial 3D printers come with Marlin installed. Check with your vendor if you need source code for your specific machine.",
-      "published_at": "2026-11-17T14:42:57Z",
-      "image": null,
-      "tags": [
-        "github",
-        "3d-printing",
-        "arduino",
-        "atmel",
-        "avr",
-        "esp32",
-        "firmware",
-        "hacktoberfest"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
+      "fetched_at": "2026-11-18T15:20:25Z"
     },
     {
       "id": "github:5eb1dfecd9f1",
@@ -466,7 +374,7 @@
       "title": "justcallmekoko/ESP32Marauder",
       "url": "https://github.com/justcallmekoko/ESP32Marauder",
       "summary": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32",
-      "published_at": "2026-11-17T14:36:42Z",
+      "published_at": "2026-11-18T14:14:31Z",
       "image": null,
       "tags": [
         "github",
@@ -479,7 +387,306 @@
         "dualband"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:66b15448c87b",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "makerspet/oomwoo",
+      "url": "https://github.com/makerspet/oomwoo",
+      "summary": "Open-source vacuum robot cleaner",
+      "published_at": "2026-11-18T13:36:55Z",
+      "image": null,
+      "tags": [
+        "github",
+        "3d-printing",
+        "arduino",
+        "diy-electronics",
+        "diy-project",
+        "esp32",
+        "esp32-arduino",
+        "home-assistant"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:efd98bb82151",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "MarlinFirmware/Marlin",
+      "url": "https://github.com/MarlinFirmware/Marlin",
+      "summary": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers. Marlin supports all common platforms. Many commercial 3D printers come with Marlin installed. Check with your vendor if you need source code for your specific machine.",
+      "published_at": "2026-11-18T10:31:30Z",
+      "image": null,
+      "tags": [
+        "github",
+        "3d-printing",
+        "arduino",
+        "atmel",
+        "avr",
+        "esp32",
+        "firmware",
+        "hacktoberfest"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "arduino-forum:ff83c9c9b79e",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "M5Stack devices sketches no longer compile",
+      "url": "https://forum.arduino.cc/t/m5stack-devices-sketches-no-longer-compile/1468184",
+      "summary": "",
+      "published_at": "2026-11-18T09:35:31Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "github:96fb0ac21537",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "SpacehuhnTech/esp8266_deauther",
+      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
+      "summary": "Affordable WiFi hacking platform for testing and learning",
+      "published_at": "2026-11-18T09:26:30Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "attack",
+        "board",
+        "deauth",
+        "deauther",
+        "esp8266",
+        "hack"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:c910da55360c",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "espressif/arduino-esp32",
+      "url": "https://github.com/espressif/arduino-esp32",
+      "summary": "Arduino core for the ESP32 family of SoCs",
+      "published_at": "2026-11-18T08:51:16Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "esp-idf",
+        "esp32",
+        "C++"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "arduino-forum:d5e283179b1e",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Composer options moved from top to bottom, not practical for me",
+      "url": "https://forum.arduino.cc/t/composer-options-moved-from-top-to-bottom-not-practical-for-me/1468176",
+      "summary": "",
+      "published_at": "2026-11-18T08:08:45Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "arduino-forum:65f84c9888cc",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "QCCOM: Plot Arduino serial readings while keeping the UART log visible",
+      "url": "https://forum.arduino.cc/t/qccom-plot-arduino-serial-readings-while-keeping-the-uart-log-visible/1468169",
+      "summary": "",
+      "published_at": "2026-11-18T07:37:51Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "github:e11d07998511",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "tinygo-org/tinygo",
+      "url": "https://github.com/tinygo-org/tinygo",
+      "summary": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.",
+      "published_at": "2026-11-18T07:21:45Z",
+      "image": null,
+      "tags": [
+        "github",
+        "adafruit",
+        "arduino",
+        "arm",
+        "avr",
+        "esp32",
+        "gpio",
+        "i2c"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "arduino-forum:b7df0a598c5f",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Masters and Slave connected via ESP Now worked when they were all connected to a PC but failed when activated in another location",
+      "url": "https://forum.arduino.cc/t/masters-and-slave-connected-via-esp-now-worked-when-they-were-all-connected-to-a-pc-but-failed-when-activated-in-another-location/1468137",
+      "summary": "",
+      "published_at": "2026-11-18T05:29:26Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "arduino-forum:d64dc6239a07",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "New AI content labeling feature",
+      "url": "https://forum.arduino.cc/t/new-ai-content-labeling-feature/1468132",
+      "summary": "",
+      "published_at": "2026-11-18T04:14:52Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "github:88f8faa04665",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "platformio/platformio-core",
+      "url": "https://github.com/platformio/platformio-core",
+      "summary": "Your Gateway to Embedded Software Development Excellence :alien:",
+      "published_at": "2026-11-18T03:11:11Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "arm",
+        "avr",
+        "build-system",
+        "cmsis",
+        "debugging",
+        "embedded"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:cfd3280c7b8c",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "gurugio/lowlevelprogramming-university",
+      "url": "https://github.com/gurugio/lowlevelprogramming-university",
+      "summary": "How to be low-level programmer",
+      "published_at": "2026-11-18T02:41:35Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "assembly",
+        "assembly-language-programming",
+        "c-programming",
+        "embedded-systems",
+        "firmware",
+        "hardware"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:f6bc45260818",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "rwaldron/johnny-five",
+      "url": "https://github.com/rwaldron/johnny-five",
+      "summary": "JavaScript Robotics and IoT programming framework, developed at Bocoup.",
+      "published_at": "2026-11-18T02:25:50Z",
+      "image": null,
+      "tags": [
+        "github",
+        "1-wire",
+        "adc",
+        "arduino",
+        "beaglebone-black",
+        "bluetooth",
+        "chip",
+        "dac"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
+    },
+    {
+      "id": "github:e1062c116d4e",
+      "source_id": "github",
+      "source_name": "GitHub",
+      "category": "hardware",
+      "language": "multi",
+      "title": "arduino/Arduino",
+      "url": "https://github.com/arduino/Arduino",
+      "summary": "Arduino IDE 1.x",
+      "published_at": "2026-11-18T02:08:53Z",
+      "image": null,
+      "tags": [
+        "github",
+        "arduino",
+        "ide",
+        "Java"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:25Z"
     },
     {
       "id": "github:694a788ea181",
@@ -490,7 +697,7 @@
       "title": "arendst/Tasmota",
       "url": "https://github.com/arendst/Tasmota",
       "summary": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",
-      "published_at": "2026-11-17T14:36:32Z",
+      "published_at": "2026-11-17T19:45:18Z",
       "image": null,
       "tags": [
         "github",
@@ -503,46 +710,7 @@
         "knx"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:c910da55360c",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "espressif/arduino-esp32",
-      "url": "https://github.com/espressif/arduino-esp32",
-      "summary": "Arduino core for the ESP32 family of SoCs",
-      "published_at": "2026-11-17T13:35:04Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "esp-idf",
-        "esp32",
-        "C++"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "arduino-forum:f8e0b46c6b06",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Installing ESP32 chip or Dev Board",
-      "url": "https://forum.arduino.cc/t/installing-esp32-chip-or-dev-board/1468066",
-      "summary": "",
-      "published_at": "2026-11-17T11:54:00Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
+      "fetched_at": "2026-11-18T15:20:25Z"
     },
     {
       "id": "arduino-forum:3299dc0b9cfc",
@@ -560,133 +728,7 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "github:88f8faa04665",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "platformio/platformio-core",
-      "url": "https://github.com/platformio/platformio-core",
-      "summary": "Your Gateway to Embedded Software Development Excellence :alien:",
-      "published_at": "2026-11-17T10:27:19Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "arm",
-        "avr",
-        "build-system",
-        "cmsis",
-        "debugging",
-        "embedded"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "github:cfd3280c7b8c",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "gurugio/lowlevelprogramming-university",
-      "url": "https://github.com/gurugio/lowlevelprogramming-university",
-      "summary": "How to be low-level programmer",
-      "published_at": "2026-11-17T04:11:43Z",
-      "image": null,
-      "tags": [
-        "github",
-        "arduino",
-        "assembly",
-        "assembly-language-programming",
-        "c-programming",
-        "embedded-systems",
-        "firmware",
-        "hardware"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "arduino-forum:e6c8d965ad42",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "AccelStepper w. Potentiometer speed control problems",
-      "url": "https://forum.arduino.cc/t/accelstepper-w-potentiometer-speed-control-problems/1467953",
-      "summary": "",
-      "published_at": "2026-11-16T20:59:09Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "github:e11d07998511",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "tinygo-org/tinygo",
-      "url": "https://github.com/tinygo-org/tinygo",
-      "summary": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.",
-      "published_at": "2026-11-16T20:52:22Z",
-      "image": null,
-      "tags": [
-        "github",
-        "adafruit",
-        "arduino",
-        "arm",
-        "avr",
-        "esp32",
-        "gpio",
-        "i2c"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "arduino-forum:bd4245786c98",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Does anyone remember this?",
-      "url": "https://forum.arduino.cc/t/does-anyone-remember-this/1467923",
-      "summary": "",
-      "published_at": "2026-11-16T15:15:29Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "arduino-forum:a216cf2d3a5b",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Bughopper for UNO R4 WiFi and Minima?",
-      "url": "https://forum.arduino.cc/t/bughopper-for-uno-r4-wifi-and-minima/1467909",
-      "summary": "",
-      "published_at": "2026-11-16T14:27:30Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
+      "fetched_at": "2026-11-18T15:20:22Z"
     },
     {
       "id": "arduino-forum:46d56c67b32c",
@@ -704,103 +746,25 @@
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
+      "fetched_at": "2026-11-18T15:20:22Z"
     },
     {
-      "id": "arduino-forum:acf4f8e11196",
+      "id": "arduino-forum:f3c061023f96",
       "source_id": "arduino-forum",
       "source_name": "Arduino Forum",
       "category": "electronica",
       "language": "multi",
-      "title": "Arduino UNO Q – How to Power Motors Autonomously Without USB-C?",
-      "url": "https://forum.arduino.cc/t/arduino-uno-q-how-to-power-motors-autonomously-without-usb-c/1467770",
+      "title": "Help with LM358 Op Amp",
+      "url": "https://forum.arduino.cc/t/help-with-lm358-op-amp/1467399",
       "summary": "",
-      "published_at": "2026-11-15T10:22:43Z",
+      "published_at": "2026-11-13T00:25:54Z",
       "image": null,
       "tags": [
         "arduino",
         "foro"
       ],
       "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "github:f6bc45260818",
-      "source_id": "github",
-      "source_name": "GitHub",
-      "category": "hardware",
-      "language": "multi",
-      "title": "rwaldron/johnny-five",
-      "url": "https://github.com/rwaldron/johnny-five",
-      "summary": "JavaScript Robotics and IoT programming framework, developed at Bocoup.",
-      "published_at": "2026-11-15T10:20:41Z",
-      "image": null,
-      "tags": [
-        "github",
-        "1-wire",
-        "adc",
-        "arduino",
-        "beaglebone-black",
-        "bluetooth",
-        "chip",
-        "dac"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:55Z"
-    },
-    {
-      "id": "arduino-forum:d939d07fa7ae",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Calculator for calculating what A ESP32 S3 reading would be on a Arduino Uno. And Voltage",
-      "url": "https://forum.arduino.cc/t/calculator-for-calculating-what-a-esp32-s3-reading-would-be-on-a-arduino-uno-and-voltage/1467575",
-      "summary": "",
-      "published_at": "2026-11-13T21:24:14Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "arduino-forum:9d3830963bde",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Arduino IDE 2.3.11 is now available",
-      "url": "https://forum.arduino.cc/t/arduino-ide-2-3-11-is-now-available/1467456",
-      "summary": "If you are using a recent version of the IDE, you will get an auto-update offer simply by starting the IDE. Otherwise, the release is available for download here: https://www.arduino.cc/en/software/#ide-download-sectio…",
-      "published_at": "2026-11-13T08:59:17Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "arduino-forum:a390e4c70785",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "LedPreResistor – free LED resistor & blink circuit calculator that shows the calculation (Windows/Linux)",
-      "url": "https://forum.arduino.cc/t/ledpreresistor-free-led-resistor-blink-circuit-calculator-that-shows-the-calculation-windows-linux/1467258",
-      "summary": "",
-      "published_at": "2026-11-11T22:09:51Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
+      "fetched_at": "2026-11-18T15:20:22Z"
     },
     {
       "id": "makezine:68e22e1ddd9a",
@@ -1087,42 +1051,6 @@
       "stale": true
     },
     {
-      "id": "arduino-forum:51c138242293",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "Help making a set of C++ Classes",
-      "url": "https://forum.arduino.cc/t/help-making-a-set-of-c-classes/1465284",
-      "summary": "",
-      "published_at": "2026-10-26T12:57:04Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
-      "id": "arduino-forum:a52b98b987cf",
-      "source_id": "arduino-forum",
-      "source_name": "Arduino Forum",
-      "category": "electronica",
-      "language": "multi",
-      "title": "A darkroom enlarger lightmeter",
-      "url": "https://forum.arduino.cc/t/a-darkroom-enlarger-lightmeter/1464893",
-      "summary": "",
-      "published_at": "2026-10-23T12:24:26Z",
-      "image": null,
-      "tags": [
-        "arduino",
-        "foro"
-      ],
-      "method": "api",
-      "fetched_at": "2026-11-17T15:40:52Z"
-    },
-    {
       "id": "adafruit:5ddddfd13b1f",
       "source_id": "adafruit",
       "source_name": "Adafruit Learning System",
@@ -1235,6 +1163,24 @@
       "stale": true
     },
     {
+      "id": "arduino-forum:07e112aef53d",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Running a stepper back and forth",
+      "url": "https://forum.arduino.cc/t/running-a-stepper-back-and-forth/1456810",
+      "summary": "",
+      "published_at": "2026-08-22T04:43:26Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
       "id": "inventable:b86252277a3a",
       "source_id": "inventable",
       "source_name": "Inventable",
@@ -1328,6 +1274,42 @@
       "method": "rss",
       "fetched_at": "2026-11-11T10:16:44Z",
       "stale": true
+    },
+    {
+      "id": "arduino-forum:7656d9b0eba5",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Deploy project through Ethernet",
+      "url": "https://forum.arduino.cc/t/deploy-project-through-ethernet/1446656",
+      "summary": "",
+      "published_at": "2026-06-01T13:58:43Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
+    },
+    {
+      "id": "arduino-forum:bc4d654a2a03",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "Paid arduino project needed",
+      "url": "https://forum.arduino.cc/t/paid-arduino-project-needed/1442931",
+      "summary": "",
+      "published_at": "2026-05-06T17:06:09Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
     },
     {
       "id": "inventable:fa5eb1622ef1",
@@ -1436,6 +1418,24 @@
       "method": "rss",
       "fetched_at": "2026-11-11T10:16:44Z",
       "stale": true
+    },
+    {
+      "id": "arduino-forum:e04a2a2d966d",
+      "source_id": "arduino-forum",
+      "source_name": "Arduino Forum",
+      "category": "electronica",
+      "language": "multi",
+      "title": "[ITALIANO] Lo spamm bar (Part 3)",
+      "url": "https://forum.arduino.cc/t/italiano-lo-spamm-bar-part-3/1333957",
+      "summary": "",
+      "published_at": "2024-12-19T21:31:57Z",
+      "image": null,
+      "tags": [
+        "arduino",
+        "foro"
+      ],
+      "method": "api",
+      "fetched_at": "2026-11-18T15:20:22Z"
     },
     {
       "id": "raspberrypi:aaea419589d5",
